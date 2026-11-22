@@ -1,0 +1,4307 @@
+{
+ "_説明": "自動取得する銘柄(みんなが選べる共通の銘柄棚)。日経225(出典: 日経平均プロフィル 構成銘柄一覧)、S&P500(出典: Wikipedia List of S&P 500 companies)、人気ETF、米国REIT。各自の画面には本人が「マイ銘柄に追加」したものだけが出る。group=分類、alias=検索用の別名。name/eps/bps/dps を書くと取得値より優先される。2026-11-21 作成",
+ "stocks": [
+  {
+   "symbol": "285A.T",
+   "name": "キオクシアホールディングス",
+   "group": "日経225",
+   "alias": "キオクシア"
+  },
+  {
+   "symbol": "4062.T",
+   "name": "イビデン",
+   "group": "日経225",
+   "alias": "イビデン"
+  },
+  {
+   "symbol": "6479.T",
+   "name": "ミネベアミツミ",
+   "group": "日経225",
+   "alias": "ミネベア"
+  },
+  {
+   "symbol": "6501.T",
+   "name": "日立製作所",
+   "group": "日経225",
+   "alias": "日立"
+  },
+  {
+   "symbol": "6503.T",
+   "name": "三菱電機",
+   "group": "日経225",
+   "alias": "三菱電"
+  },
+  {
+   "symbol": "6504.T",
+   "name": "富士電機",
+   "group": "日経225",
+   "alias": "富士電機"
+  },
+  {
+   "symbol": "6506.T",
+   "name": "安川電機",
+   "group": "日経225",
+   "alias": "安川電"
+  },
+  {
+   "symbol": "6525.T",
+   "name": "KOKUSAI ELECTRIC",
+   "group": "日経225",
+   "alias": "コクサイエレ"
+  },
+  {
+   "symbol": "6526.T",
+   "name": "ソシオネクスト",
+   "group": "日経225",
+   "alias": "ソシオネクス"
+  },
+  {
+   "symbol": "6645.T",
+   "name": "オムロン",
+   "group": "日経225",
+   "alias": "オムロン"
+  },
+  {
+   "symbol": "6701.T",
+   "name": "日本電気",
+   "group": "日経225",
+   "alias": "NEC"
+  },
+  {
+   "symbol": "6702.T",
+   "name": "富士通",
+   "group": "日経225",
+   "alias": "富士通"
+  },
+  {
+   "symbol": "6723.T",
+   "name": "ルネサスエレクトロニクス",
+   "group": "日経225",
+   "alias": "ルネサス"
+  },
+  {
+   "symbol": "6724.T",
+   "name": "セイコーエプソン",
+   "group": "日経225",
+   "alias": "エプソン"
+  },
+  {
+   "symbol": "6752.T",
+   "name": "パナソニック ホールディングス",
+   "group": "日経225",
+   "alias": "パナHD"
+  },
+  {
+   "symbol": "6753.T",
+   "name": "シャープ",
+   "group": "日経225",
+   "alias": "シャープ"
+  },
+  {
+   "symbol": "6758.T",
+   "name": "ソニーグループ",
+   "group": "日経225",
+   "alias": "ソニーG"
+  },
+  {
+   "symbol": "6762.T",
+   "name": "TDK",
+   "group": "日経225",
+   "alias": "TDK"
+  },
+  {
+   "symbol": "6770.T",
+   "name": "アルプスアルパイン",
+   "group": "日経225",
+   "alias": "アルプスアル"
+  },
+  {
+   "symbol": "6841.T",
+   "name": "横河電機",
+   "group": "日経225",
+   "alias": "横河電"
+  },
+  {
+   "symbol": "6857.T",
+   "name": "アドバンテスト",
+   "group": "日経225",
+   "alias": "アドテスト"
+  },
+  {
+   "symbol": "6861.T",
+   "name": "キーエンス",
+   "group": "日経225",
+   "alias": "キーエンス"
+  },
+  {
+   "symbol": "6902.T",
+   "name": "デンソー",
+   "group": "日経225",
+   "alias": "デンソー"
+  },
+  {
+   "symbol": "6920.T",
+   "name": "レーザーテック",
+   "group": "日経225",
+   "alias": "レーザーテク"
+  },
+  {
+   "symbol": "6954.T",
+   "name": "ファナック",
+   "group": "日経225",
+   "alias": "ファナック"
+  },
+  {
+   "symbol": "6963.T",
+   "name": "ローム",
+   "group": "日経225",
+   "alias": "ローム"
+  },
+  {
+   "symbol": "6971.T",
+   "name": "京セラ",
+   "group": "日経225",
+   "alias": "京セラ"
+  },
+  {
+   "symbol": "6976.T",
+   "name": "太陽誘電",
+   "group": "日経225",
+   "alias": "太陽誘電"
+  },
+  {
+   "symbol": "6981.T",
+   "name": "村田製作所",
+   "group": "日経225",
+   "alias": "村田製"
+  },
+  {
+   "symbol": "7735.T",
+   "name": "SCREENホールディングス",
+   "group": "日経225",
+   "alias": "スクリン"
+  },
+  {
+   "symbol": "7751.T",
+   "name": "キヤノン",
+   "group": "日経225",
+   "alias": "キヤノン"
+  },
+  {
+   "symbol": "7752.T",
+   "name": "リコー",
+   "group": "日経225",
+   "alias": "リコー"
+  },
+  {
+   "symbol": "8035.T",
+   "name": "東京エレクトロン",
+   "group": "日経225",
+   "alias": "東エレク"
+  },
+  {
+   "symbol": "7201.T",
+   "name": "日産自動車",
+   "group": "日経225",
+   "alias": "日産自"
+  },
+  {
+   "symbol": "7202.T",
+   "name": "いすゞ自動車",
+   "group": "日経225",
+   "alias": "いすゞ"
+  },
+  {
+   "symbol": "7203.T",
+   "name": "トヨタ自動車",
+   "group": "日経225",
+   "alias": "トヨタ"
+  },
+  {
+   "symbol": "7211.T",
+   "name": "三菱自動車工業",
+   "group": "日経225",
+   "alias": "三菱自"
+  },
+  {
+   "symbol": "7261.T",
+   "name": "マツダ",
+   "group": "日経225",
+   "alias": "マツダ"
+  },
+  {
+   "symbol": "7267.T",
+   "name": "本田技研工業",
+   "group": "日経225",
+   "alias": "ホンダ"
+  },
+  {
+   "symbol": "7269.T",
+   "name": "スズキ",
+   "group": "日経225",
+   "alias": "スズキ"
+  },
+  {
+   "symbol": "7270.T",
+   "name": "SUBARU",
+   "group": "日経225",
+   "alias": "SUBARU"
+  },
+  {
+   "symbol": "7272.T",
+   "name": "ヤマハ発動機",
+   "group": "日経225",
+   "alias": "ヤマハ発"
+  },
+  {
+   "symbol": "4543.T",
+   "name": "テルモ",
+   "group": "日経225",
+   "alias": "テルモ"
+  },
+  {
+   "symbol": "6146.T",
+   "name": "ディスコ",
+   "group": "日経225",
+   "alias": "ディスコ"
+  },
+  {
+   "symbol": "7731.T",
+   "name": "ニコン",
+   "group": "日経225",
+   "alias": "ニコン"
+  },
+  {
+   "symbol": "7733.T",
+   "name": "オリンパス",
+   "group": "日経225",
+   "alias": "オリンパス"
+  },
+  {
+   "symbol": "7741.T",
+   "name": "HOYA",
+   "group": "日経225",
+   "alias": "HOYA"
+  },
+  {
+   "symbol": "2432.T",
+   "name": "ディー・エヌ・エー",
+   "group": "日経225",
+   "alias": "ディーエヌエ"
+  },
+  {
+   "symbol": "3659.T",
+   "name": "ネクソン",
+   "group": "日経225",
+   "alias": "ネクソン"
+  },
+  {
+   "symbol": "3697.T",
+   "name": "SHIFT",
+   "group": "日経225",
+   "alias": "SHIFT"
+  },
+  {
+   "symbol": "4307.T",
+   "name": "野村総合研究所",
+   "group": "日経225",
+   "alias": "野村総研"
+  },
+  {
+   "symbol": "4385.T",
+   "name": "メルカリ",
+   "group": "日経225",
+   "alias": "メルカリ"
+  },
+  {
+   "symbol": "4689.T",
+   "name": "LINEヤフー",
+   "group": "日経225",
+   "alias": "ラインヤフー"
+  },
+  {
+   "symbol": "4704.T",
+   "name": "トレンドマイクロ",
+   "group": "日経225",
+   "alias": "トレンド"
+  },
+  {
+   "symbol": "7974.T",
+   "name": "任天堂",
+   "group": "日経225",
+   "alias": "任天堂"
+  },
+  {
+   "symbol": "9432.T",
+   "name": "NTT",
+   "group": "日経225",
+   "alias": "NTT"
+  },
+  {
+   "symbol": "9433.T",
+   "name": "KDDI",
+   "group": "日経225",
+   "alias": "KDDI"
+  },
+  {
+   "symbol": "9434.T",
+   "name": "ソフトバンク",
+   "group": "日経225",
+   "alias": "SB"
+  },
+  {
+   "symbol": "9602.T",
+   "name": "東宝",
+   "group": "日経225",
+   "alias": "東宝"
+  },
+  {
+   "symbol": "9697.T",
+   "name": "カプコン",
+   "group": "日経225",
+   "alias": "カプコン"
+  },
+  {
+   "symbol": "9766.T",
+   "name": "コナミグループ",
+   "group": "日経225",
+   "alias": "コナミG"
+  },
+  {
+   "symbol": "9984.T",
+   "name": "ソフトバンクグループ",
+   "group": "日経225",
+   "alias": "SBG"
+  },
+  {
+   "symbol": "5831.T",
+   "name": "しずおかフィナンシャルグループ",
+   "group": "日経225",
+   "alias": "しずおかFG"
+  },
+  {
+   "symbol": "7186.T",
+   "name": "横浜フィナンシャルグループ",
+   "group": "日経225",
+   "alias": "横浜FG"
+  },
+  {
+   "symbol": "8304.T",
+   "name": "あおぞら銀行",
+   "group": "日経225",
+   "alias": "あおぞら銀"
+  },
+  {
+   "symbol": "8306.T",
+   "name": "三菱UFJフィナンシャル・グループ",
+   "group": "日経225",
+   "alias": "三菱UFJ"
+  },
+  {
+   "symbol": "8308.T",
+   "name": "りそなホールディングス",
+   "group": "日経225",
+   "alias": "りそなHD"
+  },
+  {
+   "symbol": "8309.T",
+   "name": "三井住友トラストグループ",
+   "group": "日経225",
+   "alias": "三井住友トラ"
+  },
+  {
+   "symbol": "8316.T",
+   "name": "三井住友フィナンシャルグループ",
+   "group": "日経225",
+   "alias": "三井住友FG"
+  },
+  {
+   "symbol": "8331.T",
+   "name": "千葉銀行",
+   "group": "日経225",
+   "alias": "千葉銀"
+  },
+  {
+   "symbol": "8354.T",
+   "name": "ふくおかフィナンシャルグループ",
+   "group": "日経225",
+   "alias": "ふくおかFG"
+  },
+  {
+   "symbol": "8411.T",
+   "name": "みずほフィナンシャルグループ",
+   "group": "日経225",
+   "alias": "みずほFG"
+  },
+  {
+   "symbol": "8253.T",
+   "name": "クレディセゾン",
+   "group": "日経225",
+   "alias": "クレセゾン"
+  },
+  {
+   "symbol": "8591.T",
+   "name": "オリックス",
+   "group": "日経225",
+   "alias": "オリックス"
+  },
+  {
+   "symbol": "8697.T",
+   "name": "日本取引所グループ",
+   "group": "日経225",
+   "alias": "日本取引所"
+  },
+  {
+   "symbol": "8601.T",
+   "name": "大和証券グループ本社",
+   "group": "日経225",
+   "alias": "大和"
+  },
+  {
+   "symbol": "8604.T",
+   "name": "野村ホールディングス",
+   "group": "日経225",
+   "alias": "野村"
+  },
+  {
+   "symbol": "8630.T",
+   "name": "SOMPOホールディングス",
+   "group": "日経225",
+   "alias": "SOMPO"
+  },
+  {
+   "symbol": "8725.T",
+   "name": "MS&ADインシュアランスグループホールディングス",
+   "group": "日経225",
+   "alias": "MS&AD"
+  },
+  {
+   "symbol": "8750.T",
+   "name": "第一ライフグループ",
+   "group": "日経225",
+   "alias": "第一ライフ"
+  },
+  {
+   "symbol": "8766.T",
+   "name": "東京海上ホールディングス",
+   "group": "日経225",
+   "alias": "東京海上"
+  },
+  {
+   "symbol": "8795.T",
+   "name": "T&Dホールディングス",
+   "group": "日経225",
+   "alias": "T&D"
+  },
+  {
+   "symbol": "1332.T",
+   "name": "ニッスイ",
+   "group": "日経225",
+   "alias": "ニッスイ"
+  },
+  {
+   "symbol": "2002.T",
+   "name": "日清製粉グループ本社",
+   "group": "日経225",
+   "alias": "日清粉G"
+  },
+  {
+   "symbol": "2269.T",
+   "name": "明治ホールディングス",
+   "group": "日経225",
+   "alias": "明治HD"
+  },
+  {
+   "symbol": "2282.T",
+   "name": "日本ハム",
+   "group": "日経225",
+   "alias": "日ハム"
+  },
+  {
+   "symbol": "2501.T",
+   "name": "サッポロビール",
+   "group": "日経225",
+   "alias": "サッポロ"
+  },
+  {
+   "symbol": "2502.T",
+   "name": "アサヒグループホールディングス",
+   "group": "日経225",
+   "alias": "アサヒ"
+  },
+  {
+   "symbol": "2503.T",
+   "name": "キリンホールディングス",
+   "group": "日経225",
+   "alias": "キリンHD"
+  },
+  {
+   "symbol": "2801.T",
+   "name": "キッコーマン",
+   "group": "日経225",
+   "alias": "キッコマン"
+  },
+  {
+   "symbol": "2802.T",
+   "name": "味の素",
+   "group": "日経225",
+   "alias": "味の素"
+  },
+  {
+   "symbol": "2871.T",
+   "name": "ニチレイ",
+   "group": "日経225",
+   "alias": "ニチレイ"
+  },
+  {
+   "symbol": "2914.T",
+   "name": "日本たばこ産業",
+   "group": "日経225",
+   "alias": "JT"
+  },
+  {
+   "symbol": "4151.T",
+   "name": "協和キリン",
+   "group": "日経225",
+   "alias": "協和キリン"
+  },
+  {
+   "symbol": "4502.T",
+   "name": "武田薬品工業",
+   "group": "日経225",
+   "alias": "武田"
+  },
+  {
+   "symbol": "4503.T",
+   "name": "アステラス製薬",
+   "group": "日経225",
+   "alias": "アステラス"
+  },
+  {
+   "symbol": "4506.T",
+   "name": "住友ファーマ",
+   "group": "日経225",
+   "alias": "住友ファーマ"
+  },
+  {
+   "symbol": "4507.T",
+   "name": "塩野義製薬",
+   "group": "日経225",
+   "alias": "塩野義"
+  },
+  {
+   "symbol": "4519.T",
+   "name": "中外製薬",
+   "group": "日経225",
+   "alias": "中外薬"
+  },
+  {
+   "symbol": "4523.T",
+   "name": "エーザイ",
+   "group": "日経225",
+   "alias": "エーザイ"
+  },
+  {
+   "symbol": "4568.T",
+   "name": "第一三共",
+   "group": "日経225",
+   "alias": "第一三共"
+  },
+  {
+   "symbol": "4578.T",
+   "name": "大塚ホールディングス",
+   "group": "日経225",
+   "alias": "大塚HD"
+  },
+  {
+   "symbol": "3086.T",
+   "name": "J.フロント リテイリング",
+   "group": "日経225",
+   "alias": "Jフロント"
+  },
+  {
+   "symbol": "3092.T",
+   "name": "ZOZO",
+   "group": "日経225",
+   "alias": "ZOZO"
+  },
+  {
+   "symbol": "3099.T",
+   "name": "三越伊勢丹ホールディングス",
+   "group": "日経225",
+   "alias": "三越伊勢丹"
+  },
+  {
+   "symbol": "3382.T",
+   "name": "セブン&アイ・ホールディングス",
+   "group": "日経225",
+   "alias": "セブン&アイ"
+  },
+  {
+   "symbol": "7453.T",
+   "name": "良品計画",
+   "group": "日経225",
+   "alias": "良品計画"
+  },
+  {
+   "symbol": "7532.T",
+   "name": "パン・パシフィック・インターナショナルホールディングス",
+   "group": "日経225",
+   "alias": "パンパシHD"
+  },
+  {
+   "symbol": "8233.T",
+   "name": "高島屋",
+   "group": "日経225",
+   "alias": "高島屋"
+  },
+  {
+   "symbol": "8252.T",
+   "name": "丸井グループ",
+   "group": "日経225",
+   "alias": "丸井G"
+  },
+  {
+   "symbol": "8267.T",
+   "name": "イオン",
+   "group": "日経225",
+   "alias": "イオン"
+  },
+  {
+   "symbol": "9843.T",
+   "name": "ニトリホールディングス",
+   "group": "日経225",
+   "alias": "ニトリHD"
+  },
+  {
+   "symbol": "9983.T",
+   "name": "ファーストリテイリング",
+   "group": "日経225",
+   "alias": "ファストリ"
+  },
+  {
+   "symbol": "2413.T",
+   "name": "エムスリー",
+   "group": "日経225",
+   "alias": "エムスリー"
+  },
+  {
+   "symbol": "4324.T",
+   "name": "電通グループ",
+   "group": "日経225",
+   "alias": "電通グループ"
+  },
+  {
+   "symbol": "4661.T",
+   "name": "オリエンタルランド",
+   "group": "日経225",
+   "alias": "OLC"
+  },
+  {
+   "symbol": "4751.T",
+   "name": "サイバーエージェント",
+   "group": "日経225",
+   "alias": "サイバー"
+  },
+  {
+   "symbol": "4755.T",
+   "name": "楽天グループ",
+   "group": "日経225",
+   "alias": "楽天グループ"
+  },
+  {
+   "symbol": "6098.T",
+   "name": "リクルートホールディングス",
+   "group": "日経225",
+   "alias": "リクルート"
+  },
+  {
+   "symbol": "6178.T",
+   "name": "日本郵政",
+   "group": "日経225",
+   "alias": "日本郵政"
+  },
+  {
+   "symbol": "6532.T",
+   "name": "ベイカレント",
+   "group": "日経225",
+   "alias": "ベイカレント"
+  },
+  {
+   "symbol": "9735.T",
+   "name": "セコム",
+   "group": "日経225",
+   "alias": "セコム"
+  },
+  {
+   "symbol": "1605.T",
+   "name": "INPEX",
+   "group": "日経225",
+   "alias": "INPEX"
+  },
+  {
+   "symbol": "3401.T",
+   "name": "帝人",
+   "group": "日経225",
+   "alias": "帝人"
+  },
+  {
+   "symbol": "3402.T",
+   "name": "東レ",
+   "group": "日経225",
+   "alias": "東レ"
+  },
+  {
+   "symbol": "3861.T",
+   "name": "王子ホールディングス",
+   "group": "日経225",
+   "alias": "王子HD"
+  },
+  {
+   "symbol": "3405.T",
+   "name": "クラレ",
+   "group": "日経225",
+   "alias": "クラレ"
+  },
+  {
+   "symbol": "3407.T",
+   "name": "旭化成",
+   "group": "日経225",
+   "alias": "旭化成"
+  },
+  {
+   "symbol": "4004.T",
+   "name": "レゾナック・ホールディングス",
+   "group": "日経225",
+   "alias": "レゾナック"
+  },
+  {
+   "symbol": "4005.T",
+   "name": "住友化学",
+   "group": "日経225",
+   "alias": "住友化"
+  },
+  {
+   "symbol": "4021.T",
+   "name": "日産化学",
+   "group": "日経225",
+   "alias": "日産化"
+  },
+  {
+   "symbol": "4042.T",
+   "name": "東ソー",
+   "group": "日経225",
+   "alias": "東ソー"
+  },
+  {
+   "symbol": "4043.T",
+   "name": "トクヤマ",
+   "group": "日経225",
+   "alias": "トクヤマ"
+  },
+  {
+   "symbol": "4061.T",
+   "name": "デンカ",
+   "group": "日経225",
+   "alias": "デンカ"
+  },
+  {
+   "symbol": "4063.T",
+   "name": "信越化学工業",
+   "group": "日経225",
+   "alias": "信越化"
+  },
+  {
+   "symbol": "4183.T",
+   "name": "三井化学",
+   "group": "日経225",
+   "alias": "三井化学"
+  },
+  {
+   "symbol": "4188.T",
+   "name": "三菱ケミカルグループ",
+   "group": "日経225",
+   "alias": "三菱ケミG"
+  },
+  {
+   "symbol": "4208.T",
+   "name": "UBE",
+   "group": "日経225",
+   "alias": "UBE"
+  },
+  {
+   "symbol": "4452.T",
+   "name": "花王",
+   "group": "日経225",
+   "alias": "花王"
+  },
+  {
+   "symbol": "4901.T",
+   "name": "富士フイルムホールディングス",
+   "group": "日経225",
+   "alias": "富士フイルム"
+  },
+  {
+   "symbol": "4911.T",
+   "name": "資生堂",
+   "group": "日経225",
+   "alias": "資生堂"
+  },
+  {
+   "symbol": "6988.T",
+   "name": "日東電工",
+   "group": "日経225",
+   "alias": "日東電"
+  },
+  {
+   "symbol": "5019.T",
+   "name": "出光興産",
+   "group": "日経225",
+   "alias": "出光興産"
+  },
+  {
+   "symbol": "5020.T",
+   "name": "ENEOSホールディングス",
+   "group": "日経225",
+   "alias": "ENEOS"
+  },
+  {
+   "symbol": "5101.T",
+   "name": "横浜ゴム",
+   "group": "日経225",
+   "alias": "浜ゴム"
+  },
+  {
+   "symbol": "5108.T",
+   "name": "ブリヂストン",
+   "group": "日経225",
+   "alias": "ブリヂストン"
+  },
+  {
+   "symbol": "5201.T",
+   "name": "AGC",
+   "group": "日経225",
+   "alias": "AGC"
+  },
+  {
+   "symbol": "5214.T",
+   "name": "日本電気硝子",
+   "group": "日経225",
+   "alias": "日電硝"
+  },
+  {
+   "symbol": "5233.T",
+   "name": "太平洋セメント",
+   "group": "日経225",
+   "alias": "太平洋セメ"
+  },
+  {
+   "symbol": "5301.T",
+   "name": "東海カーボン",
+   "group": "日経225",
+   "alias": "東海カーボン"
+  },
+  {
+   "symbol": "5332.T",
+   "name": "TOTO",
+   "group": "日経225",
+   "alias": "TOTO"
+  },
+  {
+   "symbol": "5333.T",
+   "name": "NGK",
+   "group": "日経225",
+   "alias": "NGK"
+  },
+  {
+   "symbol": "5401.T",
+   "name": "日本製鉄",
+   "group": "日経225",
+   "alias": "日本製鉄"
+  },
+  {
+   "symbol": "5406.T",
+   "name": "神戸製鋼所",
+   "group": "日経225",
+   "alias": "神戸鋼"
+  },
+  {
+   "symbol": "5411.T",
+   "name": "JFEホールディングス",
+   "group": "日経225",
+   "alias": "JFE"
+  },
+  {
+   "symbol": "3436.T",
+   "name": "SUMCO",
+   "group": "日経225",
+   "alias": "SUMCO"
+  },
+  {
+   "symbol": "5016.T",
+   "name": "JX金属",
+   "group": "日経225",
+   "alias": "JX金属"
+  },
+  {
+   "symbol": "5706.T",
+   "name": "三井金属",
+   "group": "日経225",
+   "alias": "三井金属"
+  },
+  {
+   "symbol": "5711.T",
+   "name": "三菱マテリアル",
+   "group": "日経225",
+   "alias": "三菱マ"
+  },
+  {
+   "symbol": "5713.T",
+   "name": "住友金属鉱山",
+   "group": "日経225",
+   "alias": "住友鉱"
+  },
+  {
+   "symbol": "5714.T",
+   "name": "DOWAホールディングス",
+   "group": "日経225",
+   "alias": "DOWA"
+  },
+  {
+   "symbol": "5801.T",
+   "name": "古河電気工業",
+   "group": "日経225",
+   "alias": "古河電"
+  },
+  {
+   "symbol": "5802.T",
+   "name": "住友電気工業",
+   "group": "日経225",
+   "alias": "住友電"
+  },
+  {
+   "symbol": "5803.T",
+   "name": "フジクラ",
+   "group": "日経225",
+   "alias": "フジクラ"
+  },
+  {
+   "symbol": "2768.T",
+   "name": "双日",
+   "group": "日経225",
+   "alias": "双日"
+  },
+  {
+   "symbol": "8001.T",
+   "name": "伊藤忠商事",
+   "group": "日経225",
+   "alias": "伊藤忠"
+  },
+  {
+   "symbol": "8002.T",
+   "name": "丸紅",
+   "group": "日経225",
+   "alias": "丸紅"
+  },
+  {
+   "symbol": "8015.T",
+   "name": "豊田通商",
+   "group": "日経225",
+   "alias": "豊田通商"
+  },
+  {
+   "symbol": "8031.T",
+   "name": "三井物産",
+   "group": "日経225",
+   "alias": "三井物"
+  },
+  {
+   "symbol": "8053.T",
+   "name": "住友商事",
+   "group": "日経225",
+   "alias": "住友商"
+  },
+  {
+   "symbol": "8058.T",
+   "name": "三菱商事",
+   "group": "日経225",
+   "alias": "三菱商"
+  },
+  {
+   "symbol": "1721.T",
+   "name": "コムシスホールディングス",
+   "group": "日経225",
+   "alias": "コムシスHD"
+  },
+  {
+   "symbol": "1801.T",
+   "name": "大成建設",
+   "group": "日経225",
+   "alias": "大成建"
+  },
+  {
+   "symbol": "1802.T",
+   "name": "大林組",
+   "group": "日経225",
+   "alias": "大林組"
+  },
+  {
+   "symbol": "1803.T",
+   "name": "清水建設",
+   "group": "日経225",
+   "alias": "清水建"
+  },
+  {
+   "symbol": "1808.T",
+   "name": "長谷工コーポレーション",
+   "group": "日経225",
+   "alias": "長谷工"
+  },
+  {
+   "symbol": "1812.T",
+   "name": "鹿島建設",
+   "group": "日経225",
+   "alias": "鹿島"
+  },
+  {
+   "symbol": "1925.T",
+   "name": "大和ハウス工業",
+   "group": "日経225",
+   "alias": "ハウス"
+  },
+  {
+   "symbol": "1928.T",
+   "name": "積水ハウス",
+   "group": "日経225",
+   "alias": "積ハウス"
+  },
+  {
+   "symbol": "1963.T",
+   "name": "日揮ホールディングス",
+   "group": "日経225",
+   "alias": "日揮HD"
+  },
+  {
+   "symbol": "5631.T",
+   "name": "日本製鋼所",
+   "group": "日経225",
+   "alias": "日製鋼"
+  },
+  {
+   "symbol": "6103.T",
+   "name": "オークマ",
+   "group": "日経225",
+   "alias": "オークマ"
+  },
+  {
+   "symbol": "6113.T",
+   "name": "アマダ",
+   "group": "日経225",
+   "alias": "アマダ"
+  },
+  {
+   "symbol": "6273.T",
+   "name": "SMC",
+   "group": "日経225",
+   "alias": "SMC"
+  },
+  {
+   "symbol": "6301.T",
+   "name": "小松製作所",
+   "group": "日経225",
+   "alias": "コマツ"
+  },
+  {
+   "symbol": "6302.T",
+   "name": "住友重機械工業",
+   "group": "日経225",
+   "alias": "住友重"
+  },
+  {
+   "symbol": "6305.T",
+   "name": "日立建機",
+   "group": "日経225",
+   "alias": "日立建機"
+  },
+  {
+   "symbol": "6326.T",
+   "name": "クボタ",
+   "group": "日経225",
+   "alias": "クボタ"
+  },
+  {
+   "symbol": "6361.T",
+   "name": "荏原製作所",
+   "group": "日経225",
+   "alias": "荏原"
+  },
+  {
+   "symbol": "6367.T",
+   "name": "ダイキン工業",
+   "group": "日経225",
+   "alias": "ダイキン"
+  },
+  {
+   "symbol": "6471.T",
+   "name": "日本精工",
+   "group": "日経225",
+   "alias": "日精工"
+  },
+  {
+   "symbol": "6472.T",
+   "name": "NTN",
+   "group": "日経225",
+   "alias": "NTN"
+  },
+  {
+   "symbol": "6473.T",
+   "name": "ジェイテクト",
+   "group": "日経225",
+   "alias": "ジェイテクト"
+  },
+  {
+   "symbol": "7011.T",
+   "name": "三菱重工業",
+   "group": "日経225",
+   "alias": "三菱重"
+  },
+  {
+   "symbol": "7013.T",
+   "name": "IHI",
+   "group": "日経225",
+   "alias": "IHI"
+  },
+  {
+   "symbol": "7012.T",
+   "name": "川崎重工業",
+   "group": "日経225",
+   "alias": "川重"
+  },
+  {
+   "symbol": "7832.T",
+   "name": "バンダイナムコホールディングス",
+   "group": "日経225",
+   "alias": "バンナムHD"
+  },
+  {
+   "symbol": "7911.T",
+   "name": "TOPPANホールディングス",
+   "group": "日経225",
+   "alias": "TOPPAN"
+  },
+  {
+   "symbol": "7912.T",
+   "name": "大日本印刷",
+   "group": "日経225",
+   "alias": "大日印"
+  },
+  {
+   "symbol": "7951.T",
+   "name": "ヤマハ",
+   "group": "日経225",
+   "alias": "ヤマハ"
+  },
+  {
+   "symbol": "3289.T",
+   "name": "東急不動産ホールディングス",
+   "group": "日経225",
+   "alias": "東急不HD"
+  },
+  {
+   "symbol": "8801.T",
+   "name": "三井不動産",
+   "group": "日経225",
+   "alias": "三井不"
+  },
+  {
+   "symbol": "8802.T",
+   "name": "三菱地所",
+   "group": "日経225",
+   "alias": "菱地所"
+  },
+  {
+   "symbol": "8804.T",
+   "name": "東京建物",
+   "group": "日経225",
+   "alias": "東建物"
+  },
+  {
+   "symbol": "8830.T",
+   "name": "住友不動産",
+   "group": "日経225",
+   "alias": "住友不"
+  },
+  {
+   "symbol": "9001.T",
+   "name": "東武鉄道",
+   "group": "日経225",
+   "alias": "東武"
+  },
+  {
+   "symbol": "9005.T",
+   "name": "東急",
+   "group": "日経225",
+   "alias": "東急"
+  },
+  {
+   "symbol": "9007.T",
+   "name": "小田急電鉄",
+   "group": "日経225",
+   "alias": "小田急"
+  },
+  {
+   "symbol": "9008.T",
+   "name": "京王電鉄",
+   "group": "日経225",
+   "alias": "京王"
+  },
+  {
+   "symbol": "9009.T",
+   "name": "京成電鉄",
+   "group": "日経225",
+   "alias": "京成"
+  },
+  {
+   "symbol": "9020.T",
+   "name": "東日本旅客鉄道",
+   "group": "日経225",
+   "alias": "JR東日本"
+  },
+  {
+   "symbol": "9021.T",
+   "name": "西日本旅客鉄道",
+   "group": "日経225",
+   "alias": "JR西日本"
+  },
+  {
+   "symbol": "9022.T",
+   "name": "東海旅客鉄道",
+   "group": "日経225",
+   "alias": "JR東海"
+  },
+  {
+   "symbol": "9064.T",
+   "name": "ヤマトホールディングス",
+   "group": "日経225",
+   "alias": "ヤマトHD"
+  },
+  {
+   "symbol": "9147.T",
+   "name": "NIPPON EXPRESSホールディングス",
+   "group": "日経225",
+   "alias": "NXHD"
+  },
+  {
+   "symbol": "9101.T",
+   "name": "日本郵船",
+   "group": "日経225",
+   "alias": "郵船"
+  },
+  {
+   "symbol": "9104.T",
+   "name": "商船三井",
+   "group": "日経225",
+   "alias": "商船三井"
+  },
+  {
+   "symbol": "9107.T",
+   "name": "川崎汽船",
+   "group": "日経225",
+   "alias": "川崎汽"
+  },
+  {
+   "symbol": "9201.T",
+   "name": "日本航空",
+   "group": "日経225",
+   "alias": "JAL"
+  },
+  {
+   "symbol": "9202.T",
+   "name": "ANAホールディングス",
+   "group": "日経225",
+   "alias": "ANAHD"
+  },
+  {
+   "symbol": "9501.T",
+   "name": "東京電力ホールディングス",
+   "group": "日経225",
+   "alias": "東電HD"
+  },
+  {
+   "symbol": "9502.T",
+   "name": "中部電力",
+   "group": "日経225",
+   "alias": "中部電"
+  },
+  {
+   "symbol": "9503.T",
+   "name": "関西電力",
+   "group": "日経225",
+   "alias": "関西電"
+  },
+  {
+   "symbol": "9531.T",
+   "name": "東京瓦斯",
+   "group": "日経225",
+   "alias": "東ガス"
+  },
+  {
+   "symbol": "9532.T",
+   "name": "大阪瓦斯",
+   "group": "日経225",
+   "alias": "大ガス"
+  },
+  {
+   "symbol": "MMM",
+   "name": "3M",
+   "group": "S&P500",
+   "alias": "スリーエム"
+  },
+  {
+   "symbol": "AOS",
+   "name": "A. O. Smith",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "ABT",
+   "name": "Abbott Laboratories",
+   "group": "S&P500",
+   "alias": "アボット"
+  },
+  {
+   "symbol": "ABBV",
+   "name": "AbbVie",
+   "group": "S&P500",
+   "alias": "アッヴィ"
+  },
+  {
+   "symbol": "ACN",
+   "name": "Accenture",
+   "group": "S&P500",
+   "alias": "アクセンチュア"
+  },
+  {
+   "symbol": "ADBE",
+   "name": "Adobe Inc.",
+   "group": "S&P500",
+   "alias": "アドビ"
+  },
+  {
+   "symbol": "AMD",
+   "name": "Advanced Micro Devices",
+   "group": "S&P500",
+   "alias": "AMD"
+  },
+  {
+   "symbol": "AES",
+   "name": "AES Corporation",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "AFL",
+   "name": "Aflac",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "A",
+   "name": "Agilent Technologies",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "APD",
+   "name": "Air Products",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "ABNB",
+   "name": "Airbnb",
+   "group": "S&P500",
+   "alias": "エアビーアンドビー"
+  },
+  {
+   "symbol": "AKAM",
+   "name": "Akamai Technologies",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "ALB",
+   "name": "Albemarle Corporation",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "ARE",
+   "name": "Alexandria Real Estate Equities",
+   "group": "米国REIT"
+  },
+  {
+   "symbol": "ALGN",
+   "name": "Align Technology",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "ALLE",
+   "name": "Allegion",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "LNT",
+   "name": "Alliant Energy",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "ALL",
+   "name": "Allstate",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "GOOGL",
+   "name": "Alphabet Inc. (Class A)",
+   "group": "S&P500",
+   "alias": "グーグル アルファベット"
+  },
+  {
+   "symbol": "GOOG",
+   "name": "Alphabet Inc. (Class C)",
+   "group": "S&P500",
+   "alias": "グーグル アルファベット"
+  },
+  {
+   "symbol": "MO",
+   "name": "Altria",
+   "group": "S&P500",
+   "alias": "アルトリア"
+  },
+  {
+   "symbol": "AMZN",
+   "name": "Amazon",
+   "group": "S&P500",
+   "alias": "アマゾン"
+  },
+  {
+   "symbol": "AMCR",
+   "name": "Amcor",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "AEE",
+   "name": "Ameren",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "AEP",
+   "name": "American Electric Power",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "AXP",
+   "name": "American Express",
+   "group": "S&P500",
+   "alias": "アメリカン・エキスプレス"
+  },
+  {
+   "symbol": "AIG",
+   "name": "American International Group",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "AMT",
+   "name": "American Tower",
+   "group": "米国REIT",
+   "alias": "アメリカン・タワー"
+  },
+  {
+   "symbol": "AWK",
+   "name": "American Water Works",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "AMP",
+   "name": "Ameriprise Financial",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "AME",
+   "name": "Ametek",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "AMGN",
+   "name": "Amgen",
+   "group": "S&P500",
+   "alias": "アムジェン"
+  },
+  {
+   "symbol": "APH",
+   "name": "Amphenol",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "ADI",
+   "name": "Analog Devices",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "AON",
+   "name": "Aon plc",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "APA",
+   "name": "APA Corporation",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "APO",
+   "name": "Apollo Global Management",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "AAPL",
+   "name": "Apple Inc.",
+   "group": "S&P500",
+   "alias": "アップル"
+  },
+  {
+   "symbol": "AMAT",
+   "name": "Applied Materials",
+   "group": "S&P500",
+   "alias": "アプライド・マテリアルズ"
+  },
+  {
+   "symbol": "APP",
+   "name": "AppLovin",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "APTV",
+   "name": "Aptiv",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "ACGL",
+   "name": "Arch Capital Group",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "ADM",
+   "name": "Archer Daniels Midland",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "ARES",
+   "name": "Ares Management",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "ANET",
+   "name": "Arista Networks",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "AJG",
+   "name": "Arthur J. Gallagher & Co.",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "AIZ",
+   "name": "Assurant",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "T",
+   "name": "AT&T",
+   "group": "S&P500",
+   "alias": "AT&T"
+  },
+  {
+   "symbol": "ATO",
+   "name": "Atmos Energy",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "ADSK",
+   "name": "Autodesk",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "ADP",
+   "name": "Automatic Data Processing",
+   "group": "S&P500",
+   "alias": "ADP"
+  },
+  {
+   "symbol": "AZO",
+   "name": "AutoZone",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "AVY",
+   "name": "Avery Dennison",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "AXON",
+   "name": "Axon Enterprise",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "BKR",
+   "name": "Baker Hughes",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "BALL",
+   "name": "Ball Corporation",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "BAC",
+   "name": "Bank of America",
+   "group": "S&P500",
+   "alias": "バンク・オブ・アメリカ"
+  },
+  {
+   "symbol": "BAX",
+   "name": "Baxter International",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "BDX",
+   "name": "Becton Dickinson",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "BRK-B",
+   "name": "Berkshire Hathaway",
+   "group": "S&P500",
+   "alias": "バークシャー・ハサウェイ"
+  },
+  {
+   "symbol": "BBY",
+   "name": "Best Buy",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "TECH",
+   "name": "Bio-Techne",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "BIIB",
+   "name": "Biogen",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "BLK",
+   "name": "BlackRock",
+   "group": "S&P500",
+   "alias": "ブラックロック"
+  },
+  {
+   "symbol": "BX",
+   "name": "Blackstone Inc.",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "XYZ",
+   "name": "Block, Inc.",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "BE",
+   "name": "Bloom Energy",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "BNY",
+   "name": "BNY Mellon",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "BA",
+   "name": "Boeing",
+   "group": "S&P500",
+   "alias": "ボーイング"
+  },
+  {
+   "symbol": "BKNG",
+   "name": "Booking Holdings",
+   "group": "S&P500",
+   "alias": "ブッキング"
+  },
+  {
+   "symbol": "BSX",
+   "name": "Boston Scientific",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "BMY",
+   "name": "Bristol Myers Squibb",
+   "group": "S&P500",
+   "alias": "ブリストル・マイヤーズ"
+  },
+  {
+   "symbol": "AVGO",
+   "name": "Broadcom",
+   "group": "S&P500",
+   "alias": "ブロードコム"
+  },
+  {
+   "symbol": "BR",
+   "name": "Broadridge Financial Solutions",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "BRO",
+   "name": "Brown & Brown",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "BF-B",
+   "name": "Brown–Forman",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "BG",
+   "name": "Bunge Global",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "BXP",
+   "name": "BXP, Inc.",
+   "group": "米国REIT"
+  },
+  {
+   "symbol": "CHRW",
+   "name": "C.H. Robinson",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "CDNS",
+   "name": "Cadence Design Systems",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "CPT",
+   "name": "Camden Property Trust",
+   "group": "米国REIT"
+  },
+  {
+   "symbol": "COF",
+   "name": "Capital One",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "CAH",
+   "name": "Cardinal Health",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "CCL",
+   "name": "Carnival Corporation",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "CARR",
+   "name": "Carrier Global",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "CVNA",
+   "name": "Carvana",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "CASY",
+   "name": "Casey's",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "CAT",
+   "name": "Caterpillar Inc.",
+   "group": "S&P500",
+   "alias": "キャタピラー"
+  },
+  {
+   "symbol": "CBOE",
+   "name": "Cboe Global Markets",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "CBRE",
+   "name": "CBRE Group",
+   "group": "米国REIT"
+  },
+  {
+   "symbol": "CDW",
+   "name": "CDW Corporation",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "COR",
+   "name": "Cencora",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "CNC",
+   "name": "Centene Corporation",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "CNP",
+   "name": "CenterPoint Energy",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "CF",
+   "name": "CF Industries",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "CRL",
+   "name": "Charles River Laboratories",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "SCHW",
+   "name": "Charles Schwab Corporation",
+   "group": "S&P500",
+   "alias": "チャールズ・シュワブ"
+  },
+  {
+   "symbol": "CHTR",
+   "name": "Charter Communications",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "CVX",
+   "name": "Chevron Corporation",
+   "group": "S&P500",
+   "alias": "シェブロン"
+  },
+  {
+   "symbol": "CMG",
+   "name": "Chipotle Mexican Grill",
+   "group": "S&P500",
+   "alias": "チポトレ"
+  },
+  {
+   "symbol": "CB",
+   "name": "Chubb Limited",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "CHD",
+   "name": "Church & Dwight",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "CIEN",
+   "name": "Ciena",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "CI",
+   "name": "Cigna",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "CINF",
+   "name": "Cincinnati Financial",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "CTAS",
+   "name": "Cintas",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "CSCO",
+   "name": "Cisco",
+   "group": "S&P500",
+   "alias": "シスコ"
+  },
+  {
+   "symbol": "C",
+   "name": "Citigroup",
+   "group": "S&P500",
+   "alias": "シティグループ"
+  },
+  {
+   "symbol": "CFG",
+   "name": "Citizens Financial Group",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "CLX",
+   "name": "Clorox",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "CME",
+   "name": "CME Group",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "CMS",
+   "name": "CMS Energy",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "KO",
+   "name": "Coca-Cola Company (The)",
+   "group": "S&P500",
+   "alias": "コカ・コーラ"
+  },
+  {
+   "symbol": "CTSH",
+   "name": "Cognizant",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "COHR",
+   "name": "Coherent Corp.",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "COIN",
+   "name": "Coinbase",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "CL",
+   "name": "Colgate-Palmolive",
+   "group": "S&P500",
+   "alias": "コルゲート"
+  },
+  {
+   "symbol": "CMCSA",
+   "name": "Comcast",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "FIX",
+   "name": "Comfort Systems USA",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "COP",
+   "name": "ConocoPhillips",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "ED",
+   "name": "Consolidated Edison",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "STZ",
+   "name": "Constellation Brands",
+   "group": "S&P500",
+   "alias": "コンステレーション・ブランズ"
+  },
+  {
+   "symbol": "CEG",
+   "name": "Constellation Energy",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "COO",
+   "name": "Cooper Companies (The)",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "CPRT",
+   "name": "Copart",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "GLW",
+   "name": "Corning Inc.",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "CPAY",
+   "name": "Corpay",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "CSGP",
+   "name": "CoStar Group",
+   "group": "米国REIT"
+  },
+  {
+   "symbol": "COST",
+   "name": "Costco",
+   "group": "S&P500",
+   "alias": "コストコ"
+  },
+  {
+   "symbol": "CRH",
+   "name": "CRH plc",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "CRWD",
+   "name": "CrowdStrike",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "CCI",
+   "name": "Crown Castle",
+   "group": "米国REIT"
+  },
+  {
+   "symbol": "CSX",
+   "name": "CSX Corporation",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "CMI",
+   "name": "Cummins",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "CVS",
+   "name": "CVS Health",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "DHR",
+   "name": "Danaher Corporation",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "DRI",
+   "name": "Darden Restaurants",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "DDOG",
+   "name": "Datadog",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "DVA",
+   "name": "DaVita",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "DECK",
+   "name": "Deckers Brands",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "DE",
+   "name": "Deere & Company",
+   "group": "S&P500",
+   "alias": "ディア"
+  },
+  {
+   "symbol": "DELL",
+   "name": "Dell Technologies",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "DAL",
+   "name": "Delta Air Lines",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "DVN",
+   "name": "Devon Energy",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "DXCM",
+   "name": "Dexcom",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "FANG",
+   "name": "Diamondback Energy",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "DLR",
+   "name": "Digital Realty",
+   "group": "米国REIT",
+   "alias": "デジタル・リアルティ"
+  },
+  {
+   "symbol": "DG",
+   "name": "Dollar General",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "DLTR",
+   "name": "Dollar Tree",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "D",
+   "name": "Dominion Energy",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "DPZ",
+   "name": "Domino's",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "DASH",
+   "name": "DoorDash",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "DOV",
+   "name": "Dover Corporation",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "DOW",
+   "name": "Dow Inc.",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "DHI",
+   "name": "D. R. Horton",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "DTE",
+   "name": "DTE Energy",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "DUK",
+   "name": "Duke Energy",
+   "group": "S&P500",
+   "alias": "デューク・エナジー"
+  },
+  {
+   "symbol": "DD",
+   "name": "DuPont",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "ETN",
+   "name": "Eaton Corporation",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "EBAY",
+   "name": "eBay Inc.",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "ECHO",
+   "name": "EchoStar",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "ECL",
+   "name": "Ecolab",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "EIX",
+   "name": "Edison International",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "EW",
+   "name": "Edwards Lifesciences",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "ELV",
+   "name": "Elevance Health",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "EME",
+   "name": "Emcor",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "EMR",
+   "name": "Emerson Electric",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "ETR",
+   "name": "Entergy",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "EOG",
+   "name": "EOG Resources",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "EQT",
+   "name": "EQT Corporation",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "EFX",
+   "name": "Equifax",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "EQIX",
+   "name": "Equinix",
+   "group": "米国REIT",
+   "alias": "エクイニクス"
+  },
+  {
+   "symbol": "ERIE",
+   "name": "Erie Indemnity",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "ESS",
+   "name": "Essex Property Trust",
+   "group": "米国REIT"
+  },
+  {
+   "symbol": "EL",
+   "name": "Estée Lauder Companies (The)",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "EG",
+   "name": "Everest Group",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "EVRG",
+   "name": "Evergy",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "P",
+   "name": "Everpure",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "ES",
+   "name": "Eversource Energy",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "EXC",
+   "name": "Exelon",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "EXE",
+   "name": "Expand Energy",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "EXPE",
+   "name": "Expedia Group",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "EXPD",
+   "name": "Expeditors International",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "EXR",
+   "name": "Extra Space Storage",
+   "group": "米国REIT"
+  },
+  {
+   "symbol": "XOM",
+   "name": "ExxonMobil",
+   "group": "S&P500",
+   "alias": "エクソンモービル"
+  },
+  {
+   "symbol": "FFIV",
+   "name": "F5, Inc.",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "FDS",
+   "name": "FactSet",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "FICO",
+   "name": "Fair Isaac",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "FAST",
+   "name": "Fastenal",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "FRT",
+   "name": "Federal Realty Investment Trust",
+   "group": "米国REIT"
+  },
+  {
+   "symbol": "FDX",
+   "name": "FedEx",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "FDXF",
+   "name": "FedEx Freight",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "FERG",
+   "name": "Ferguson Enterprises",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "FIS",
+   "name": "Fidelity National Information Services",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "FITB",
+   "name": "Fifth Third Bancorp",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "FSLR",
+   "name": "First Solar",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "FE",
+   "name": "FirstEnergy",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "FISV",
+   "name": "Fiserv",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "FLEX",
+   "name": "Flex Ltd.",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "F",
+   "name": "Ford Motor Company",
+   "group": "S&P500",
+   "alias": "フォード"
+  },
+  {
+   "symbol": "FTNT",
+   "name": "Fortinet",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "FTV",
+   "name": "Fortive",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "FOXA",
+   "name": "Fox Corporation (Class A)",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "FOX",
+   "name": "Fox Corporation (Class B)",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "BEN",
+   "name": "Franklin Resources",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "FCX",
+   "name": "Freeport-McMoRan",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "GRMN",
+   "name": "Garmin",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "IT",
+   "name": "Gartner",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "GE",
+   "name": "GE Aerospace",
+   "group": "S&P500",
+   "alias": "GE"
+  },
+  {
+   "symbol": "GEHC",
+   "name": "GE HealthCare",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "GEV",
+   "name": "GE Vernova",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "GEN",
+   "name": "Gen Digital",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "GNRC",
+   "name": "Generac",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "GD",
+   "name": "General Dynamics",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "GIS",
+   "name": "General Mills",
+   "group": "S&P500",
+   "alias": "ゼネラル・ミルズ"
+  },
+  {
+   "symbol": "GM",
+   "name": "General Motors",
+   "group": "S&P500",
+   "alias": "GM ゼネラル・モーターズ"
+  },
+  {
+   "symbol": "GPC",
+   "name": "Genuine Parts Company",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "GILD",
+   "name": "Gilead Sciences",
+   "group": "S&P500",
+   "alias": "ギリアド"
+  },
+  {
+   "symbol": "GPN",
+   "name": "Global Payments",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "GL",
+   "name": "Globe Life",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "GDDY",
+   "name": "GoDaddy",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "GS",
+   "name": "Goldman Sachs",
+   "group": "S&P500",
+   "alias": "ゴールドマン・サックス"
+  },
+  {
+   "symbol": "HAL",
+   "name": "Halliburton",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "HIG",
+   "name": "Hartford (The)",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "HAS",
+   "name": "Hasbro",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "HCA",
+   "name": "HCA Healthcare",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "DOC",
+   "name": "Healthpeak Properties",
+   "group": "米国REIT"
+  },
+  {
+   "symbol": "HSIC",
+   "name": "Henry Schein",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "HSY",
+   "name": "Hershey Company (The)",
+   "group": "S&P500",
+   "alias": "ハーシー"
+  },
+  {
+   "symbol": "HPE",
+   "name": "Hewlett Packard Enterprise",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "HLT",
+   "name": "Hilton Worldwide",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "HD",
+   "name": "Home Depot (The)",
+   "group": "S&P500",
+   "alias": "ホーム・デポ"
+  },
+  {
+   "symbol": "HONA",
+   "name": "Honeywell Aerospace",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "HON",
+   "name": "Honeywell Technologies",
+   "group": "S&P500",
+   "alias": "ハネウェル"
+  },
+  {
+   "symbol": "HRL",
+   "name": "Hormel Foods",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "HST",
+   "name": "Host Hotels & Resorts",
+   "group": "米国REIT"
+  },
+  {
+   "symbol": "HWM",
+   "name": "Howmet Aerospace",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "HPQ",
+   "name": "HP Inc.",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "HUBB",
+   "name": "Hubbell Incorporated",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "HUM",
+   "name": "Humana",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "HBAN",
+   "name": "Huntington Bancshares",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "HII",
+   "name": "Huntington Ingalls Industries",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "IBM",
+   "name": "IBM",
+   "group": "S&P500",
+   "alias": "IBM"
+  },
+  {
+   "symbol": "IEX",
+   "name": "IDEX Corporation",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "IDXX",
+   "name": "Idexx Laboratories",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "ITW",
+   "name": "Illinois Tool Works",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "ILMN",
+   "name": "Illumina, Inc.",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "INCY",
+   "name": "Incyte",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "IR",
+   "name": "Ingersoll Rand",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "PODD",
+   "name": "Insulet Corporation",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "INTC",
+   "name": "Intel",
+   "group": "S&P500",
+   "alias": "インテル"
+  },
+  {
+   "symbol": "IBKR",
+   "name": "Interactive Brokers",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "ICE",
+   "name": "Intercontinental Exchange",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "IFF",
+   "name": "International Flavors & Fragrances",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "IP",
+   "name": "International Paper",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "INTU",
+   "name": "Intuit",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "ISRG",
+   "name": "Intuitive Surgical",
+   "group": "S&P500",
+   "alias": "インテュイティブ・サージカル"
+  },
+  {
+   "symbol": "IVZ",
+   "name": "Invesco",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "INVH",
+   "name": "Invitation Homes",
+   "group": "米国REIT"
+  },
+  {
+   "symbol": "IQV",
+   "name": "IQVIA",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "IRM",
+   "name": "Iron Mountain",
+   "group": "米国REIT"
+  },
+  {
+   "symbol": "JBHT",
+   "name": "J.B. Hunt",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "JBL",
+   "name": "Jabil",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "JKHY",
+   "name": "Jack Henry & Associates",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "J",
+   "name": "Jacobs Solutions",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "JNJ",
+   "name": "Johnson & Johnson",
+   "group": "S&P500",
+   "alias": "ジョンソン・エンド・ジョンソン"
+  },
+  {
+   "symbol": "JCI",
+   "name": "Johnson Controls",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "JPM",
+   "name": "JPMorgan Chase",
+   "group": "S&P500",
+   "alias": "JPモルガン"
+  },
+  {
+   "symbol": "KDP",
+   "name": "Keurig Dr Pepper",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "KEY",
+   "name": "KeyCorp",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "KEYS",
+   "name": "Keysight Technologies",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "KMB",
+   "name": "Kimberly-Clark",
+   "group": "S&P500",
+   "alias": "キンバリー・クラーク"
+  },
+  {
+   "symbol": "KIM",
+   "name": "Kimco Realty",
+   "group": "米国REIT"
+  },
+  {
+   "symbol": "KMI",
+   "name": "Kinder Morgan",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "KKR",
+   "name": "KKR & Co.",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "KLAC",
+   "name": "KLA Corporation",
+   "group": "S&P500",
+   "alias": "KLA"
+  },
+  {
+   "symbol": "KHC",
+   "name": "Kraft Heinz",
+   "group": "S&P500",
+   "alias": "クラフト・ハインツ"
+  },
+  {
+   "symbol": "KR",
+   "name": "Kroger",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "LHX",
+   "name": "L3Harris",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "LH",
+   "name": "Labcorp",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "LRCX",
+   "name": "Lam Research",
+   "group": "S&P500",
+   "alias": "ラムリサーチ"
+  },
+  {
+   "symbol": "LVS",
+   "name": "Las Vegas Sands",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "LDOS",
+   "name": "Leidos",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "LEN",
+   "name": "Lennar",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "LII",
+   "name": "Lennox International",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "LLY",
+   "name": "Lilly (Eli)",
+   "group": "S&P500",
+   "alias": "イーライリリー"
+  },
+  {
+   "symbol": "LIN",
+   "name": "Linde plc",
+   "group": "S&P500",
+   "alias": "リンデ"
+  },
+  {
+   "symbol": "LYV",
+   "name": "Live Nation Entertainment",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "LMT",
+   "name": "Lockheed Martin",
+   "group": "S&P500",
+   "alias": "ロッキード・マーティン"
+  },
+  {
+   "symbol": "L",
+   "name": "Loews Corporation",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "LOW",
+   "name": "Lowe's",
+   "group": "S&P500",
+   "alias": "ロウズ"
+  },
+  {
+   "symbol": "LULU",
+   "name": "Lululemon Athletica",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "LITE",
+   "name": "Lumentum",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "LYB",
+   "name": "LyondellBasell",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "MTB",
+   "name": "M&T Bank",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "MPC",
+   "name": "Marathon Petroleum",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "MAR",
+   "name": "Marriott International",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "MRSH",
+   "name": "Marsh McLennan",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "MLM",
+   "name": "Martin Marietta Materials",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "MRVL",
+   "name": "Marvell Technology",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "MAS",
+   "name": "Masco",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "MA",
+   "name": "Mastercard",
+   "group": "S&P500",
+   "alias": "マスターカード"
+  },
+  {
+   "symbol": "MKC",
+   "name": "McCormick & Company",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "MCD",
+   "name": "McDonald's",
+   "group": "S&P500",
+   "alias": "マクドナルド"
+  },
+  {
+   "symbol": "MCK",
+   "name": "McKesson",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "MDT",
+   "name": "Medtronic",
+   "group": "S&P500",
+   "alias": "メドトロニック"
+  },
+  {
+   "symbol": "MRK",
+   "name": "Merck & Co.",
+   "group": "S&P500",
+   "alias": "メルク"
+  },
+  {
+   "symbol": "META",
+   "name": "Meta Platforms",
+   "group": "S&P500",
+   "alias": "メタ フェイスブック"
+  },
+  {
+   "symbol": "MET",
+   "name": "MetLife",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "MTD",
+   "name": "Mettler Toledo",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "MGM",
+   "name": "MGM Resorts",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "MCHP",
+   "name": "Microchip Technology",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "MU",
+   "name": "Micron Technology",
+   "group": "S&P500",
+   "alias": "マイクロン"
+  },
+  {
+   "symbol": "MSFT",
+   "name": "Microsoft",
+   "group": "S&P500",
+   "alias": "マイクロソフト"
+  },
+  {
+   "symbol": "MAA",
+   "name": "Mid-America Apartment Communities",
+   "group": "米国REIT"
+  },
+  {
+   "symbol": "MRNA",
+   "name": "Moderna",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "MDLZ",
+   "name": "Mondelez International",
+   "group": "S&P500",
+   "alias": "モンデリーズ"
+  },
+  {
+   "symbol": "MPWR",
+   "name": "Monolithic Power Systems",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "MNST",
+   "name": "Monster Beverage",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "MCO",
+   "name": "Moody's Corporation",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "MS",
+   "name": "Morgan Stanley",
+   "group": "S&P500",
+   "alias": "モルガン・スタンレー"
+  },
+  {
+   "symbol": "MOS",
+   "name": "Mosaic Company (The)",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "MSI",
+   "name": "Motorola Solutions",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "MSCI",
+   "name": "MSCI",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "NDAQ",
+   "name": "Nasdaq, Inc.",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "NTAP",
+   "name": "NetApp",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "NFLX",
+   "name": "Netflix",
+   "group": "S&P500",
+   "alias": "ネットフリックス"
+  },
+  {
+   "symbol": "NEM",
+   "name": "Newmont",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "NWSA",
+   "name": "News Corp (Class A)",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "NWS",
+   "name": "News Corp (Class B)",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "NEE",
+   "name": "NextEra Energy",
+   "group": "S&P500",
+   "alias": "ネクステラ"
+  },
+  {
+   "symbol": "NKE",
+   "name": "Nike, Inc.",
+   "group": "S&P500",
+   "alias": "ナイキ"
+  },
+  {
+   "symbol": "NI",
+   "name": "NiSource",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "NDSN",
+   "name": "Nordson Corporation",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "NSC",
+   "name": "Norfolk Southern",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "NTRS",
+   "name": "Northern Trust",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "NOC",
+   "name": "Northrop Grumman",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "NCLH",
+   "name": "Norwegian Cruise Line Holdings",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "NRG",
+   "name": "NRG Energy",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "NUE",
+   "name": "Nucor",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "NVDA",
+   "name": "Nvidia",
+   "group": "S&P500",
+   "alias": "エヌビディア"
+  },
+  {
+   "symbol": "NVR",
+   "name": "NVR, Inc.",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "NXPI",
+   "name": "NXP Semiconductors",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "ORLY",
+   "name": "O'Reilly Automotive",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "OXY",
+   "name": "Occidental Petroleum",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "OKTA",
+   "name": "Okta, Inc.",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "ODFL",
+   "name": "Old Dominion",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "OMC",
+   "name": "Omnicom Group",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "ON",
+   "name": "ON Semiconductor",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "OKE",
+   "name": "Oneok",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "ORCL",
+   "name": "Oracle Corporation",
+   "group": "S&P500",
+   "alias": "オラクル"
+  },
+  {
+   "symbol": "OTIS",
+   "name": "Otis Worldwide",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "PCAR",
+   "name": "Paccar",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "PKG",
+   "name": "Packaging Corporation of America",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "PLTR",
+   "name": "Palantir Technologies",
+   "group": "S&P500",
+   "alias": "パランティア"
+  },
+  {
+   "symbol": "PANW",
+   "name": "Palo Alto Networks",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "PH",
+   "name": "Parker Hannifin",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "PAYX",
+   "name": "Paychex",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "PYPL",
+   "name": "PayPal",
+   "group": "S&P500",
+   "alias": "ペイパル"
+  },
+  {
+   "symbol": "PNR",
+   "name": "Pentair",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "PEP",
+   "name": "PepsiCo",
+   "group": "S&P500",
+   "alias": "ペプシコ"
+  },
+  {
+   "symbol": "PFE",
+   "name": "Pfizer",
+   "group": "S&P500",
+   "alias": "ファイザー"
+  },
+  {
+   "symbol": "PCG",
+   "name": "PG&E Corporation",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "PM",
+   "name": "Philip Morris International",
+   "group": "S&P500",
+   "alias": "フィリップ・モリス"
+  },
+  {
+   "symbol": "PSX",
+   "name": "Phillips 66",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "PNW",
+   "name": "Pinnacle West Capital",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "PNC",
+   "name": "PNC Financial Services",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "PPG",
+   "name": "PPG Industries",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "PPL",
+   "name": "PPL Corporation",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "PFG",
+   "name": "Principal Financial Group",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "PG",
+   "name": "Procter & Gamble",
+   "group": "S&P500",
+   "alias": "プロクター・アンド・ギャンブル"
+  },
+  {
+   "symbol": "PGR",
+   "name": "Progressive Corporation",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "PLD",
+   "name": "Prologis",
+   "group": "米国REIT",
+   "alias": "プロロジス"
+  },
+  {
+   "symbol": "PRU",
+   "name": "Prudential Financial",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "PTC",
+   "name": "PTC Inc.",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "PEG",
+   "name": "Public Service Enterprise Group",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "PSA",
+   "name": "Public Storage",
+   "group": "米国REIT",
+   "alias": "パブリック・ストレージ"
+  },
+  {
+   "symbol": "PHM",
+   "name": "PulteGroup",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "Q",
+   "name": "Qnity Electronics",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "QCOM",
+   "name": "Qualcomm",
+   "group": "S&P500",
+   "alias": "クアルコム"
+  },
+  {
+   "symbol": "PWR",
+   "name": "Quanta Services",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "DGX",
+   "name": "Quest Diagnostics",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "RL",
+   "name": "Ralph Lauren Corporation",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "RJF",
+   "name": "Raymond James Financial",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "RDDT",
+   "name": "Reddit",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "O",
+   "name": "Realty Income",
+   "group": "米国REIT",
+   "alias": "リアルティ・インカム"
+  },
+  {
+   "symbol": "REG",
+   "name": "Regency Centers",
+   "group": "米国REIT"
+  },
+  {
+   "symbol": "REGN",
+   "name": "Regeneron Pharmaceuticals",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "RF",
+   "name": "Regions Financial Corporation",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "RSG",
+   "name": "Republic Services",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "RMD",
+   "name": "ResMed",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "RVTY",
+   "name": "Revvity",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "HOOD",
+   "name": "Robinhood Markets",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "ROK",
+   "name": "Rockwell Automation",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "ROL",
+   "name": "Rollins, Inc.",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "ROP",
+   "name": "Roper Technologies",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "ROST",
+   "name": "Ross Stores",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "RCL",
+   "name": "Royal Caribbean Group",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "RTX",
+   "name": "RTX Corporation",
+   "group": "S&P500",
+   "alias": "RTX レイセオン"
+  },
+  {
+   "symbol": "SPGI",
+   "name": "S&P Global",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "CRM",
+   "name": "Salesforce",
+   "group": "S&P500",
+   "alias": "セールスフォース"
+  },
+  {
+   "symbol": "SNDK",
+   "name": "Sandisk",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "SBAC",
+   "name": "SBA Communications",
+   "group": "米国REIT"
+  },
+  {
+   "symbol": "SLB",
+   "name": "Schlumberger",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "STX",
+   "name": "Seagate Technology",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "SRE",
+   "name": "Sempra",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "NOW",
+   "name": "ServiceNow",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "SHW",
+   "name": "Sherwin-Williams",
+   "group": "S&P500",
+   "alias": "シャーウィン・ウィリアムズ"
+  },
+  {
+   "symbol": "SPG",
+   "name": "Simon Property Group",
+   "group": "米国REIT",
+   "alias": "サイモン・プロパティ"
+  },
+  {
+   "symbol": "SKYD",
+   "name": "Skydance",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "SWKS",
+   "name": "Skyworks Solutions",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "SJM",
+   "name": "J.M. Smucker Company (The)",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "SW",
+   "name": "Smurfit Westrock",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "SNA",
+   "name": "Snap-on",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "SOLV",
+   "name": "Solventum",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "SO",
+   "name": "Southern Company",
+   "group": "S&P500",
+   "alias": "サザン"
+  },
+  {
+   "symbol": "LUV",
+   "name": "Southwest Airlines",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "SWK",
+   "name": "Stanley Black & Decker",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "SBUX",
+   "name": "Starbucks",
+   "group": "S&P500",
+   "alias": "スターバックス"
+  },
+  {
+   "symbol": "STT",
+   "name": "State Street Corporation",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "STLD",
+   "name": "Steel Dynamics",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "STE",
+   "name": "Steris",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "SYK",
+   "name": "Stryker Corporation",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "SMCI",
+   "name": "Supermicro",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "SYF",
+   "name": "Synchrony Financial",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "SNPS",
+   "name": "Synopsys",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "SYY",
+   "name": "Sysco",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "TMUS",
+   "name": "T-Mobile US",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "TROW",
+   "name": "T. Rowe Price",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "TTWO",
+   "name": "Take-Two Interactive",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "TPR",
+   "name": "Tapestry, Inc.",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "TRGP",
+   "name": "Targa Resources",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "TGT",
+   "name": "Target Corporation",
+   "group": "S&P500",
+   "alias": "ターゲット"
+  },
+  {
+   "symbol": "TEL",
+   "name": "TE Connectivity",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "TDY",
+   "name": "Teledyne Technologies",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "TER",
+   "name": "Teradyne",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "TSLA",
+   "name": "Tesla, Inc.",
+   "group": "S&P500",
+   "alias": "テスラ"
+  },
+  {
+   "symbol": "TXN",
+   "name": "Texas Instruments",
+   "group": "S&P500",
+   "alias": "テキサス・インスツルメンツ"
+  },
+  {
+   "symbol": "TPL",
+   "name": "Texas Pacific Land Corporation",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "TXT",
+   "name": "Textron",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "TMO",
+   "name": "Thermo Fisher Scientific",
+   "group": "S&P500",
+   "alias": "サーモフィッシャー"
+  },
+  {
+   "symbol": "TJX",
+   "name": "TJX Companies",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "TKO",
+   "name": "TKO Group Holdings",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "TSCO",
+   "name": "Tractor Supply",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "TT",
+   "name": "Trane Technologies",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "TDG",
+   "name": "TransDigm Group",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "TRV",
+   "name": "Travelers Companies (The)",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "TRMB",
+   "name": "Trimble Inc.",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "TFC",
+   "name": "Truist Financial",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "TWLO",
+   "name": "Twilio",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "TYL",
+   "name": "Tyler Technologies",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "TSN",
+   "name": "Tyson Foods",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "USB",
+   "name": "U.S. Bancorp",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "UBER",
+   "name": "Uber",
+   "group": "S&P500",
+   "alias": "ウーバー"
+  },
+  {
+   "symbol": "UDR",
+   "name": "UDR, Inc.",
+   "group": "米国REIT"
+  },
+  {
+   "symbol": "ULTA",
+   "name": "Ulta Beauty",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "UNP",
+   "name": "Union Pacific Corporation",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "UAL",
+   "name": "United Airlines Holdings",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "UPS",
+   "name": "United Parcel Service",
+   "group": "S&P500",
+   "alias": "UPS"
+  },
+  {
+   "symbol": "URI",
+   "name": "United Rentals",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "UNH",
+   "name": "UnitedHealth Group",
+   "group": "S&P500",
+   "alias": "ユナイテッドヘルス"
+  },
+  {
+   "symbol": "UHS",
+   "name": "Universal Health Services",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "VLO",
+   "name": "Valero Energy",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "VEEV",
+   "name": "Veeva Systems",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "VTR",
+   "name": "Ventas",
+   "group": "米国REIT"
+  },
+  {
+   "symbol": "VLTO",
+   "name": "Veralto",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "VRSN",
+   "name": "Verisign",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "VRSK",
+   "name": "Verisk Analytics",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "VZ",
+   "name": "Verizon",
+   "group": "S&P500",
+   "alias": "ベライゾン"
+  },
+  {
+   "symbol": "VRTX",
+   "name": "Vertex Pharmaceuticals",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "VRT",
+   "name": "Vertiv",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "VTRS",
+   "name": "Viatris",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "VICI",
+   "name": "Vici Properties",
+   "group": "米国REIT",
+   "alias": "VICIプロパティーズ"
+  },
+  {
+   "symbol": "V",
+   "name": "Visa Inc.",
+   "group": "S&P500",
+   "alias": "ビザ"
+  },
+  {
+   "symbol": "VST",
+   "name": "Vistra Corp.",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "VMRK",
+   "name": "Vivmark Residential",
+   "group": "米国REIT"
+  },
+  {
+   "symbol": "VMC",
+   "name": "Vulcan Materials Company",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "VYLR",
+   "name": "Vylor",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "WRB",
+   "name": "W. R. Berkley Corporation",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "GWW",
+   "name": "W. W. Grainger",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "WAB",
+   "name": "Wabtec",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "WMT",
+   "name": "Walmart",
+   "group": "S&P500",
+   "alias": "ウォルマート"
+  },
+  {
+   "symbol": "DIS",
+   "name": "Walt Disney Company (The)",
+   "group": "S&P500",
+   "alias": "ディズニー"
+  },
+  {
+   "symbol": "WM",
+   "name": "Waste Management",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "WAT",
+   "name": "Waters Corporation",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "WEC",
+   "name": "WEC Energy Group",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "WFC",
+   "name": "Wells Fargo",
+   "group": "S&P500",
+   "alias": "ウェルズ・ファーゴ"
+  },
+  {
+   "symbol": "WELL",
+   "name": "Welltower",
+   "group": "米国REIT",
+   "alias": "ウェルタワー"
+  },
+  {
+   "symbol": "WST",
+   "name": "West Pharmaceutical Services",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "WDC",
+   "name": "Western Digital",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "WY",
+   "name": "Weyerhaeuser",
+   "group": "米国REIT"
+  },
+  {
+   "symbol": "WSM",
+   "name": "Williams-Sonoma, Inc.",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "WMB",
+   "name": "Williams Companies",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "WTW",
+   "name": "Willis Towers Watson",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "WDAY",
+   "name": "Workday, Inc.",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "WYNN",
+   "name": "Wynn Resorts",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "XEL",
+   "name": "Xcel Energy",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "XYL",
+   "name": "Xylem Inc.",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "YUM",
+   "name": "Yum! Brands",
+   "group": "S&P500",
+   "alias": "ヤム・ブランズ"
+  },
+  {
+   "symbol": "ZBRA",
+   "name": "Zebra Technologies",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "ZBH",
+   "name": "Zimmer Biomet",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "ZTS",
+   "name": "Zoetis",
+   "group": "S&P500"
+  },
+  {
+   "symbol": "NNN",
+   "name": "NNN REIT",
+   "group": "米国REIT",
+   "alias": "リート ネットリース"
+  },
+  {
+   "symbol": "ADC",
+   "name": "Agree Realty",
+   "group": "米国REIT",
+   "alias": "リート ネットリース"
+  },
+  {
+   "symbol": "WPC",
+   "name": "W. P. Carey",
+   "group": "米国REIT",
+   "alias": "リート ネットリース"
+  },
+  {
+   "symbol": "STAG",
+   "name": "STAG Industrial",
+   "group": "米国REIT",
+   "alias": "リート 物流"
+  },
+  {
+   "symbol": "OHI",
+   "name": "Omega Healthcare Investors",
+   "group": "米国REIT",
+   "alias": "リート ヘルスケア"
+  },
+  {
+   "symbol": "SBRA",
+   "name": "Sabra Health Care REIT",
+   "group": "米国REIT",
+   "alias": "リート ヘルスケア"
+  },
+  {
+   "symbol": "LTC",
+   "name": "LTC Properties",
+   "group": "米国REIT",
+   "alias": "リート ヘルスケア"
+  },
+  {
+   "symbol": "EPR",
+   "name": "EPR Properties",
+   "group": "米国REIT",
+   "alias": "リート"
+  },
+  {
+   "symbol": "GLPI",
+   "name": "Gaming and Leisure Properties",
+   "group": "米国REIT",
+   "alias": "リート カジノ"
+  },
+  {
+   "symbol": "IIPR",
+   "name": "Innovative Industrial Properties",
+   "group": "米国REIT",
+   "alias": "リート"
+  },
+  {
+   "symbol": "CUBE",
+   "name": "CubeSmart",
+   "group": "米国REIT",
+   "alias": "リート 倉庫"
+  },
+  {
+   "symbol": "EGP",
+   "name": "EastGroup Properties",
+   "group": "米国REIT",
+   "alias": "リート 物流"
+  },
+  {
+   "symbol": "REXR",
+   "name": "Rexford Industrial Realty",
+   "group": "米国REIT",
+   "alias": "リート 物流"
+  },
+  {
+   "symbol": "LAMR",
+   "name": "Lamar Advertising",
+   "group": "米国REIT",
+   "alias": "リート 広告"
+  },
+  {
+   "symbol": "AMH",
+   "name": "American Homes 4 Rent",
+   "group": "米国REIT",
+   "alias": "リート 住宅"
+  },
+  {
+   "symbol": "ELS",
+   "name": "Equity LifeStyle Properties",
+   "group": "米国REIT",
+   "alias": "リート 住宅"
+  },
+  {
+   "symbol": "SUI",
+   "name": "Sun Communities",
+   "group": "米国REIT",
+   "alias": "リート 住宅"
+  },
+  {
+   "symbol": "AGNC",
+   "name": "AGNC Investment",
+   "group": "米国REIT",
+   "alias": "リート モーゲージ"
+  },
+  {
+   "symbol": "NLY",
+   "name": "Annaly Capital Management",
+   "group": "米国REIT",
+   "alias": "リート モーゲージ"
+  },
+  {
+   "symbol": "VOO",
+   "name": "Vanguard S&P 500 ETF",
+   "group": "ETF",
+   "alias": "バンガード S&P500"
+  },
+  {
+   "symbol": "VTI",
+   "name": "Vanguard Total Stock Market ETF",
+   "group": "ETF",
+   "alias": "バンガード 全米株式"
+  },
+  {
+   "symbol": "VT",
+   "name": "Vanguard Total World Stock ETF",
+   "group": "ETF",
+   "alias": "バンガード 全世界株式"
+  },
+  {
+   "symbol": "SPY",
+   "name": "SPDR S&P 500 ETF",
+   "group": "ETF",
+   "alias": "S&P500"
+  },
+  {
+   "symbol": "IVV",
+   "name": "iShares Core S&P 500 ETF",
+   "group": "ETF",
+   "alias": "S&P500"
+  },
+  {
+   "symbol": "QQQ",
+   "name": "Invesco QQQ Trust",
+   "group": "ETF",
+   "alias": "ナスダック100"
+  },
+  {
+   "symbol": "VYM",
+   "name": "Vanguard High Dividend Yield ETF",
+   "group": "ETF",
+   "alias": "高配当"
+  },
+  {
+   "symbol": "HDV",
+   "name": "iShares Core High Dividend ETF",
+   "group": "ETF",
+   "alias": "高配当"
+  },
+  {
+   "symbol": "SPYD",
+   "name": "SPDR Portfolio S&P 500 High Dividend ETF",
+   "group": "ETF",
+   "alias": "高配当"
+  },
+  {
+   "symbol": "SCHD",
+   "name": "Schwab US Dividend Equity ETF",
+   "group": "ETF",
+   "alias": "高配当 連続増配"
+  },
+  {
+   "symbol": "VIG",
+   "name": "Vanguard Dividend Appreciation ETF",
+   "group": "ETF",
+   "alias": "連続増配"
+  },
+  {
+   "symbol": "DGRO",
+   "name": "iShares Core Dividend Growth ETF",
+   "group": "ETF",
+   "alias": "増配"
+  },
+  {
+   "symbol": "JEPI",
+   "name": "JPMorgan Equity Premium Income ETF",
+   "group": "ETF",
+   "alias": "高配当 カバードコール"
+  },
+  {
+   "symbol": "JEPQ",
+   "name": "JPMorgan Nasdaq Equity Premium Income ETF",
+   "group": "ETF",
+   "alias": "高配当 カバードコール ナスダック"
+  },
+  {
+   "symbol": "QYLD",
+   "name": "Global X NASDAQ 100 Covered Call ETF",
+   "group": "ETF",
+   "alias": "カバードコール"
+  },
+  {
+   "symbol": "VEA",
+   "name": "Vanguard FTSE Developed Markets ETF",
+   "group": "ETF",
+   "alias": "先進国"
+  },
+  {
+   "symbol": "VWO",
+   "name": "Vanguard FTSE Emerging Markets ETF",
+   "group": "ETF",
+   "alias": "新興国"
+  },
+  {
+   "symbol": "VXUS",
+   "name": "Vanguard Total International Stock ETF",
+   "group": "ETF",
+   "alias": "米国除く全世界"
+  },
+  {
+   "symbol": "AGG",
+   "name": "iShares Core US Aggregate Bond ETF",
+   "group": "ETF",
+   "alias": "債券"
+  },
+  {
+   "symbol": "BND",
+   "name": "Vanguard Total Bond Market ETF",
+   "group": "ETF",
+   "alias": "債券"
+  },
+  {
+   "symbol": "TLT",
+   "name": "iShares 20+ Year Treasury Bond ETF",
+   "group": "ETF",
+   "alias": "米国債 長期債"
+  },
+  {
+   "symbol": "GLD",
+   "name": "SPDR Gold Shares",
+   "group": "ETF",
+   "alias": "金 ゴールド"
+  },
+  {
+   "symbol": "IAU",
+   "name": "iShares Gold Trust",
+   "group": "ETF",
+   "alias": "金 ゴールド"
+  },
+  {
+   "symbol": "VNQ",
+   "name": "Vanguard Real Estate ETF",
+   "group": "ETF",
+   "alias": "リート 不動産"
+  },
+  {
+   "symbol": "XLK",
+   "name": "Technology Select Sector SPDR",
+   "group": "ETF",
+   "alias": "テクノロジー"
+  },
+  {
+   "symbol": "SOXX",
+   "name": "iShares Semiconductor ETF",
+   "group": "ETF",
+   "alias": "半導体"
+  },
+  {
+   "symbol": "SMH",
+   "name": "VanEck Semiconductor ETF",
+   "group": "ETF",
+   "alias": "半導体"
+  },
+  {
+   "symbol": "1306.T",
+   "name": "TOPIX連動型上場投信",
+   "group": "ETF",
+   "alias": "TOPIX"
+  },
+  {
+   "symbol": "1321.T",
+   "name": "日経225連動型上場投信",
+   "group": "ETF",
+   "alias": "日経平均"
+  },
+  {
+   "symbol": "1489.T",
+   "name": "NEXT FUNDS 日経平均高配当株50指数連動型上場投信",
+   "group": "ETF",
+   "alias": "高配当"
+  },
+  {
+   "symbol": "1478.T",
+   "name": "iシェアーズ MSCI ジャパン高配当利回り ETF",
+   "group": "ETF",
+   "alias": "高配当"
+  },
+  {
+   "symbol": "1343.T",
+   "name": "NEXT FUNDS 東証REIT指数連動型上場投信",
+   "group": "ETF",
+   "alias": "Jリート 不動産"
+  },
+  {
+   "symbol": "2558.T",
+   "name": "MAXIS 米国株式(S&P500)上場投信",
+   "group": "ETF",
+   "alias": "S&P500"
+  },
+  {
+   "symbol": "2559.T",
+   "name": "MAXIS 全世界株式(オール・カントリー)上場投信",
+   "group": "ETF",
+   "alias": "オルカン 全世界"
+  },
+  {
+   "symbol": "1655.T",
+   "name": "iシェアーズ S&P 500 米国株 ETF",
+   "group": "ETF",
+   "alias": "S&P500"
+  },
+  {
+   "symbol": "2631.T",
+   "name": "MAXIS ナスダック100上場投信",
+   "group": "ETF",
+   "alias": "ナスダック100"
+  }
+ ]
+}

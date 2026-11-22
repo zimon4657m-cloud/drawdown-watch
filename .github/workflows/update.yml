@@ -1,0 +1,76 @@
+name: update-prices
+
+on:
+  schedule:
+    - cron: "30 7 * * 1-5"   # 16:30 JST 平日
+    - cron: "30 21 * * 0-4"  # 06:30 JST 平日
+  workflow_dispatch:
+  push:
+    branches: [main]
+  issues:
+    types: [opened]          # 画面の「自動取得に追加」→ タイトル「add: ティッカー」の Issue
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+  issues: write
+
+concurrency:
+  group: update-prices
+  cancel-in-progress: false
+
+jobs:
+  update:
+    # Issue はリポジトリの持ち主が立てた「add:」で始まるものだけ処理する
+    if: >-
+      github.event_name != 'issues' ||
+      (startsWith(github.event.issue.title, 'add:') && github.event.issue.user.login == github.repository_owner)
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install yfinance
+      - name: Add symbols from issue
+        id: add
+        if: github.event_name == 'issues'
+        env:
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+        run: |
+          python scripts/add_from_issue.py > added.txt
+          echo "added=$(paste -sd ' ' added.txt)" >> "$GITHUB_OUTPUT"
+          rm added.txt
+      - name: Fetch prices
+        if: github.event_name != 'push'
+        run: python scripts/fetch_prices.py
+      - name: Commit
+        if: github.event_name != 'push'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898+github-actions[bot]@users.noreply.github.com"
+          git add data/prices.json watchlist.json
+          git diff --cached --quiet || (git commit -m "update prices" && git push)
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - id: deployment
+        uses: actions/deploy-pages@v4
+      - name: Close issue
+        if: always() && github.event_name == 'issues'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ADDED: ${{ steps.add.outputs.added }}
+          RESULT: ${{ job.status }}
+        run: |
+          if [ "$RESULT" = "success" ]; then
+            gh issue close ${{ github.event.issue.number }} --repo ${{ github.repository }} --comment "追加しました: ${ADDED:-(すでに登録済み)}"
+          else
+            gh issue comment ${{ github.event.issue.number }} --repo ${{ github.repository }} --body "追加に失敗しました。Actions のログを確認してください"
+          fi
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
