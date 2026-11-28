@@ -57,6 +57,9 @@ jobs:
       - uses: actions/upload-pages-artifact@v4
         with:
           path: .
+      # アップロード直後は公開用ファイルがまだ見えず失敗することがある(取得なしで短時間に終わる push 時に起きた)。少し待ってから公開する
+      - name: Wait for artifact
+        run: sleep 30
       - id: deployment
         uses: actions/deploy-pages@v4
       - name: Close issue
