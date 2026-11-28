@@ -174,7 +174,7 @@ dialog h2{font-size:15px;margin:0 0 10px}
   <div id="searchBox">
     <input id="q" type="search" placeholder="会社名・コードで検索(例: トヨタ / アップル / 7203 / KO)" autocomplete="off" enterkeyhint="search">
     <ul class="qres" id="qRes"></ul>
-    <p class="note">日経225・S&amp;P500・米国REIT・人気ETF の <span id="shelfN">0</span>銘柄は株価を毎日自動で取得しています。登録した銘柄はこの端末の中だけに保存され、ほかの人には見えません。</p>
+    <p class="note">日経225・S&amp;P500・米国REIT・人気ETF ほかの <span id="shelfN">0</span>銘柄は株価を毎日自動で取得しています。登録した銘柄はこの端末の中だけに保存され、ほかの人には見えません。</p>
     <p class="note" style="margin-top:14px;font-weight:600;color:var(--fg)">― 検索に無い銘柄 ―</p>
   </div>
   <div class="form">
@@ -642,7 +642,7 @@ $("btnMine").onclick=()=>{
 // 全角→半角、大文字→小文字、カタカナ→ひらがな、記号と空白を除いて比べる
 const kn = s => (s||"").normalize("NFKC").toLowerCase().replace(/[ァ-ヶ]/g,c=>String.fromCharCode(c.charCodeAt(0)-0x60)).replace(/[\s・･.,&'’()（）\-ー]/g,"");
 let SIDX=[];
-const GORD={"日経225":0,"S&P500":1,"米国REIT":2,"ETF":3};
+const GORD={"日経225":0,"日本株":1,"S&P500":2,"米国株":3,"米国REIT":4,"ETF":5};
 function fillShelf(){
   SIDX=Object.entries(D.stocks).map(([sym,r])=>({sym,r,code:kn(sym.replace(/\.T$/,"")),nm:kn(r.name),al:kn(r.alias)}));
   $("shelfN").textContent=SIDX.length;
