@@ -23,7 +23,7 @@
 body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.45 -apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP","Yu Gothic UI",sans-serif;-webkit-text-size-adjust:100%}
 main{max-width:960px;margin:0 auto;padding:12px 12px 40px}
 h1{font-size:20px;margin:2px 0 0;letter-spacing:.04em}
-.hero{position:relative;margin:-12px -12px 4px;padding:16px 16px 0;height:360px;overflow:hidden;background:var(--hero)}
+.hero{position:relative;margin:-12px -12px 4px;padding:16px 16px 0;height:390px;overflow:hidden;background:var(--hero)}
 @media (min-width:984px){.hero{border-radius:0 0 22px 22px}}
 .hero svg.art{position:absolute;inset:0;display:block}
 .hero .in{position:relative}
@@ -99,6 +99,32 @@ dialog h2{font-size:15px;margin:0 0 10px}
 .u input{padding-right:52px}
 .u i{position:absolute;right:8px;top:50%;transform:translateY(-50%);font-style:normal;font-size:12px;color:var(--sub);pointer-events:none}
 .empty{text-align:center;color:var(--sub);padding:24px 8px}
+/* 大きめの切り替えボタン(ウォッチリストの区分・表示) */
+.seg.lg button{padding:7px 14px;font-size:13px}
+.seg.lg button.on{background:linear-gradient(90deg,var(--g1),var(--g2));color:#fff}
+/* ダイアログ下のキャンセル・保存 */
+.acts.foot{gap:10px;margin-top:16px}
+.acts.foot button{flex:1;font-size:15px;padding:13px 16px;border-radius:12px}
+/* 一括更新 */
+.hero button.upd{background:linear-gradient(90deg,var(--g1),var(--g2));color:#fff;border-color:transparent;font-weight:600}
+.hero button.upd:disabled{opacity:.6}
+.hero .btns button{white-space:nowrap}
+@media (max-width:430px){.hero .btns{gap:4px}.hero .btns button{padding:5px 9px;font-size:11.5px}.hero .top{align-items:flex-start}}
+/* 簡易版 */
+.st.simple .grid{grid-template-columns:repeat(4,1fr);margin-top:6px}
+/* アノマリー(12ヶ月の帯) */
+:root{--buy:#17a37a;--hold:#3a86e8;--sell:#e0566b}
+@media (prefers-color-scheme:dark){:root{--buy:#3fd3a3;--hold:#5b9cf0;--sell:#ff7d8e}}
+.anom{margin-top:6px}
+.anom .hd{display:flex;justify-content:space-between;align-items:baseline;gap:6px}
+.anom .hd b{font-size:13px}
+.anom .lg{font-size:10px;color:var(--sub);white-space:nowrap}
+.anom .lg i{display:inline-block;width:8px;height:8px;border-radius:2px;margin:0 2px 0 5px;vertical-align:0}
+.anom .row{display:grid;grid-template-columns:repeat(12,1fr);gap:2px;margin-top:4px}
+.anom .row div{text-align:center;font-size:9px;color:var(--sub)}
+.anom .row span{display:block;height:12px;margin:4px 1px 1px;border-radius:4px;opacity:.5}
+.anom .row .now{color:var(--fg);font-weight:700}
+.anom .row .now span{height:16px;margin-top:0;opacity:1;box-shadow:0 0 0 2px var(--bg),0 0 0 3.5px var(--c)}
 </style>
 </head>
 <body>
@@ -106,19 +132,18 @@ dialog h2{font-size:15px;margin:0 0 10px}
 <header class="hero" id="hero">
   <svg class="art" id="fireArt" aria-hidden="true"></svg>
   <div class="in">
-    <div class="top"><div class="eyebrow" id="eyebrow">TWO ROADS</div><div class="btns"><button class="btn dark" id="btnFire">✎ 目標を編集</button><button class="btn" id="btnSet" aria-label="設定">⚙</button></div></div>
+    <div class="top"><div class="eyebrow" id="eyebrow">TWO ROADS</div><div class="btns"><button class="btn upd" id="btnUpd" aria-label="最新データに一括更新">⟳ 一括更新</button><button class="btn dark" id="btnFire">✎ 目標を編集</button><button class="btn" id="btnSet" aria-label="設定">⚙</button></div></div>
     <h1>高値からの下落率</h1>
     <div class="meta" id="meta"></div>
-    <div class="bar" aria-label="最高値の期間と表示">
-      <div class="seg" id="segPeriod"></div>
-      <div class="seg" id="segMode"></div>
-    </div>
+    <div class="anom" id="anom" aria-label="月ごとのアノマリー"></div>
   </div>
 </header>
 
+<div class="bar" aria-label="指数グラフの表示"><span class="small">指数グラフ</span><div class="seg" id="segMode"></div></div>
 <section class="idx" id="idx"></section>
 
-<section class="card" id="scWrap" style="margin-top:8px">
+<div class="bar" style="margin-top:12px" aria-label="最高値の期間"><span class="small">最高値の期間</span><div class="seg" id="segPeriod"></div></div>
+<section class="card" id="scWrap">
   <div style="display:flex;justify-content:space-between;align-items:baseline;gap:6px;flex-wrap:wrap"><span style="font-weight:600;font-size:13px">下落の深さ × 期間</span><span class="small">横=経過月数 ◆指数 <span class="star">●</span>★銘柄</span></div>
   <div id="sc"></div>
 </section>
@@ -126,12 +151,8 @@ dialog h2{font-size:15px;margin:0 0 10px}
 <div class="bar" style="justify-content:space-between">
   <div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap">
     <span class="wl">WATCHLIST</span>
-    <select id="market" aria-label="市場で絞り込み">
-      <option value="all">すべて</option>
-      <option value="jp">日本株</option>
-      <option value="us">米国株</option>
-      <option value="other">その他</option>
-    </select>
+    <div class="seg lg" id="segMarket" role="group" aria-label="市場で絞り込み"></div>
+    <div class="seg lg" id="segView" role="group" aria-label="表示の切り替え"></div>
     <select id="sort" aria-label="並べ替え">
       <option value="dd">下落率が大きい順</option>
       <option value="room">割安度が高い順</option>
@@ -145,7 +166,7 @@ dialog h2{font-size:15px;margin:0 0 10px}
 
 <div id="pend"></div>
 <section class="list" id="list"></section>
-<p class="note">★＝下落20%以上かつ割安度が＋。理論株価は目安で、売買をすすめるものではありません。</p>
+<p class="note">★＝下落20%以上かつ割安度が＋。理論株価は目安で、売買をすすめるものではありません。<br>月ごとのアノマリー(買い時・保有月・売り時)は、過去30年(1996〜2025年)の日経平均とS&amp;P500の月間騰落率の傾向で、将来の値動きを約束するものではありません。</p>
 </main>
 
 <dialog id="dlgStock"><form method="dialog" id="fStock">
@@ -173,13 +194,15 @@ dialog h2{font-size:15px;margin:0 0 10px}
     <label>EPS(1株利益)<span class="u"><input name="eps" type="number" step="any" inputmode="decimal"><i data-u="ps"></i></span></label>
     <label>BPS(1株純資産)<span class="u"><input name="bps" type="number" step="any" inputmode="decimal"><i data-u="ps"></i></span></label>
   </div>
-  <div class="acts"><button class="btn" value="cancel" formnovalidate>キャンセル</button><button class="btn pri" value="ok">保存</button></div>
+  <div class="acts foot"><button class="btn" value="cancel" formnovalidate>キャンセル</button><button class="btn pri" value="ok">保存</button></div>
 </form></dialog>
 
 <dialog id="dlgSet"><form method="dialog" id="fSet">
   <h2>設定</h2>
   <p class="note" style="margin-top:0">データ(マイ銘柄・手入力・資産の記録・目標)はこの端末の中だけに保存され、次に開いたときもそのまま残ります。機種変更や万一に備えて、ファイルに書き出しておけます。</p>
   <div class="acts" style="justify-content:flex-start;margin:6px 0 10px"><button type="button" class="btn" id="btnExport">バックアップを書き出す</button><button type="button" class="btn" id="btnImport">バックアップから戻す</button><input type="file" id="fileImport" accept=".json,application/json" hidden></div>
+  <p class="note" style="margin-top:0">株価は平日の 6:30 と 16:30 に自動で取得しています。「⟳ 一括更新」はその最新の取得結果を読み込み直します。いますぐ取り直したいときは、管理者が GitHub で取得を実行できます(15〜30分かかります)。</p>
+  <div class="acts" style="justify-content:flex-start;margin:6px 0 10px"><button type="button" class="btn" id="btnRun">今すぐ株価を取得(管理者用)</button></div>
   <p class="note" style="margin-top:0">理論株価の計算</p>
   <div class="form">
     <label>配当成長率 %<input name="g" type="number" step="0.1"></label>
@@ -195,7 +218,7 @@ dialog h2{font-size:15px;margin:0 0 10px}
     <label>S&amp;P 最高値<input name="s_high" type="number" step="any"></label>
     <label class="w">S&amp;P 最高値の日付<input name="s_date" type="date"></label>
   </div>
-  <div class="acts"><button class="btn" value="cancel" formnovalidate>キャンセル</button><button class="btn pri" value="ok">保存</button></div>
+  <div class="acts foot"><button class="btn" value="cancel" formnovalidate>キャンセル</button><button class="btn pri" value="ok">保存</button></div>
 </form></dialog>
 
 <dialog id="dlgFire" class="sheet"><form method="dialog" id="fFire">
@@ -212,7 +235,7 @@ dialog h2{font-size:15px;margin:0 0 10px}
   <div class="sec"><span>年間配当の目盛り(右の縦軸)</span></div>
   <div class="msg"><label class="small">最小<span class="u"><input name="dMin" type="number" step="any" inputmode="decimal"><i>万円</i></span></label><label class="small">最大(FIREゴール)<span class="u"><input name="dMax" type="number" step="any" inputmode="decimal"><i>万円</i></span></label><label class="small">間隔<span class="u"><input name="dStep" type="number" step="any" inputmode="decimal"><i>万円</i></span></label><label class="small">サイドFIRE<span class="u"><input name="dSide" type="number" step="any" inputmode="decimal" placeholder="空欄=なし"><i>万円</i></span></label></div>
   <p class="note">どちらも「最大」がFIREのゴールです。「サイドFIRE」は途中の目標で、グラフに点線で表示します(空欄なら表示しません)。</p>
-  <div class="acts"><button class="btn" value="cancel" formnovalidate>キャンセル</button><button class="btn pri" value="ok">保存</button></div>
+  <div class="acts foot"><button class="btn" value="cancel" formnovalidate>キャンセル</button><button class="btn pri" value="ok">保存</button></div>
 </form></dialog>
 
 <script>
@@ -221,7 +244,9 @@ const IDX = [["^N225","日経平均","n"],["^GSPC","S&P500","s"]];
 const PERIODS = [["1y","1年",365],["3y","3年",1095],["5y","5年",1825],["max","上場来",null]];
 const LS_KEY = "ddwatch.v1";
 const REPO = "zimon4657m-cloud/drawdown-watch"; // 「自動取得に追加」で開く GitHub リポジトリ
-const DEF = {period:"1y",mode:"price",sort:"dd",g:2,r:6,per:15,manual:[],idxManual:{},hidden:[],pending:[],market:"all",fire:null,mine:[]};
+const DEF = {period:"1y",mode:"price",sort:"dd",g:2,r:6,per:15,manual:[],idxManual:{},hidden:[],pending:[],market:"all",view:"detail",fire:null,mine:[]};
+const MARKETS = [["all","全て"],["jp","日本株"],["us","米国株"],["other","その他"]];
+const VIEWS = [["simple","簡易"],["detail","詳細"]];
 // 市場の判定: .T=日本株、英字だけ(BRK-B のようなハイフン可)=米国株、それ以外(.L .HK など)=その他
 const market = s => /\.T$/.test(s)||/^\d[0-9A-Z]{3}$/.test(s) ? "jp" : /^[A-Z]{1,5}(-[A-Z])?$/.test(s) ? "us" : "other";
 
@@ -321,7 +346,7 @@ function rows(){
   for(const [sym,r] of Object.entries(D.stocks)){
     if(!r.highs || !S.mine.includes(sym)) continue;
     const h=r.highs[S.period];
-    list.push({sym,name:r.name||sym,price:r.price,date:r.date,high:h.value,highDate:h.date,eps:r.eps,bps:r.bps,dps:r.dps,
+    list.push({sym,name:r.name||sym,alias:r.alias,group:r.group,dg5:r.dg5,price:r.price,date:r.date,high:h.value,highDate:h.date,eps:r.eps,bps:r.bps,dps:r.dps,
       cur:r.currency||(sym.endsWith(".T")?"JPY":"USD"),auto:true,stale:r.stale,short:S.period!=="max"&&r.first_date>new Date(new Date(r.date)-PERIODS.find(p=>p[0]===S.period)[2]*864e5).toISOString().slice(0,10)});
   }
   S.manual.forEach((m,i)=>list.push({sym:m.symbol,name:m.name||m.symbol,price:m.price,date:m.updated||today(),high:Math.max(m.high,m.price),highDate:m.price>m.high?(m.updated||today()):m.highDate,
@@ -332,16 +357,17 @@ function rows(){
 function render(){
   $("segPeriod").innerHTML = PERIODS.map(p=>`<button data-p="${p[0]}" class="${S.period===p[0]?"on":""}">${p[1]}</button>`).join("");
   $("segMode").innerHTML = [["price","価格"],["dd","下落率"]].map(m=>`<button data-m="${m[0]}" class="${S.mode===m[0]?"on":""}">${m[1]}</button>`).join("");
+  $("segMarket").innerHTML = MARKETS.map(m=>`<button data-mk="${m[0]}" class="${S.market===m[0]?"on":""}" aria-pressed="${S.market===m[0]}">${m[1]}</button>`).join("");
+  $("segView").innerHTML = VIEWS.map(m=>`<button data-v="${m[0]}" class="${S.view===m[0]?"on":""}" aria-pressed="${S.view===m[0]}">${m[1]}</button>`).join("");
   $("sort").value=S.sort;
   const hasAuto = Object.keys(D.indices).length>0;
   $("meta").textContent = hasAuto ? `自動取得 ${D.updated?D.updated.replace("T"," ").slice(0,16):""}・終値ベース` : "自動データなし → 手入力データで表示中";
 
-  renderFire();
+  renderFire(); renderAnom();
   const idd = renderIdx();
   const list = rows().map(r=>{ const dd=r.price/r.high-1; return {...r,dd,mo:months(r.highDate,r.date),...theory(r),
     vsN: idd["^N225"]==null?null:dd-idd["^N225"], vsS: idd["^GSPC"]==null?null:dd-idd["^GSPC"]}; })
     .filter(r=>S.market==="all"||market(r.sym)===S.market);
-  $("market").value=S.market;
   const key = {dd:(a,b)=>a.dd-b.dd, room:(a,b)=>(b.room??-9)-(a.room??-9), months:(a,b)=>b.mo-a.mo, name:(a,b)=>a.name.localeCompare(b.name,"ja")}[S.sort];
   list.sort(key);
   $("cnt").textContent = `${list.length}銘柄`;
@@ -352,6 +378,15 @@ function render(){
   if(!list.length){ $("list").innerHTML = `<div class="card empty">${S.market==="all"?"まだ銘柄が登録されていません。<br>「＋ 銘柄を追加」から、気になる銘柄を登録してください。<br><span class=\"small\">iPhoneは Safari の共有ボタン →「ホーム画面に追加」から開くと、アプリのように使えてデータも消えにくくなります。</span>":"この区分の銘柄はありません"}</div>`; return; }
   $("list").innerHTML = list.map(r=>{
     const star = r.dd<=-0.2 && r.room>0;
+    if(S.view==="simple") return `<article class="card st simple">
+      <div class="top"><div style="min-width:0"><div class="nm">${star?'<span class="star">★</span> ':""}${esc(r.name)}</div><div class="cd">${esc(r.sym)}</div></div>
+        <div class="dd ${cls(r.dd)}" style="font-size:20px">${fmtPct(r.dd)}</div></div>
+      <div class="grid">
+        <div><div class="k">現在値</div><div class="v">${fmtPrice(r.price,r.cur)}</div></div>
+        <div><div class="k">最高値</div><div class="v">${fmtPrice(r.high,r.cur)}</div></div>
+        <div><div class="k">割安度</div><div class="v ${cls(r.room)}">${fmtPct(r.room)}</div></div>
+        <div><div class="k">増配率5年</div><div class="v ${cls(r.dg5)}">${fmtPct(r.dg5)}</div></div>
+      </div></article>`;
     return `<article class="card st">
       <div class="top"><div><div class="nm">${star?'<span class="star">★</span> ':""}${esc(r.name)}</div>
         <div class="cd">${esc(r.sym)}${r.auto?"":'<span class="tag">手入力</span>'}${r.stale?'<span class="tag">前回値</span>':""}${r.short?'<span class="tag">期間不足</span>':""}</div></div>
@@ -371,11 +406,25 @@ function render(){
         <div><div class="k">割安度</div><div class="v ${cls(r.room)}" style="font-weight:600">${fmtPct(r.room)}</div></div>
         <div><div class="k">EPS / BPS</div><div class="v">${r.eps??"—"} / ${r.bps!=null?(+r.bps).toFixed(0):"—"}</div></div>
         <div><div class="k">来期配当</div><div class="v">${r.dps??"—"}</div></div>
+        <div><div class="k">増配率(過去5年・年平均)</div><div class="v ${cls(r.dg5)}">${fmtPct(r.dg5)}</div></div>
       </div>
       <div class="acts">${(()=>{ const on=!S.hidden.includes(r.sym); return `<button class="btn tg${on?" on":""}" data-tg="${esc(r.sym)}" aria-pressed="${on}">${on?"● 散布図に表示":"○ 散布図に非表示"}</button>`; })()}
         ${r.auto?`<button class="btn" data-rm="${esc(r.sym)}">外す</button>`:`<button class="btn" data-edit="${r.mi}">編集</button><button class="btn" data-del="${r.mi}">削除</button>`}</div>
     </article>`;
   }).join("");
+}
+
+// ---- 月ごとのアノマリー(ヘッダーの12ヶ月の帯) ----
+// 過去30年(1996〜2025年)の月間騰落率。[平均%(日経とS&Pの平均), 上がった年の割合% 日経, S&P]。出典: yfinance ^N225 ^GSPC の月末終値
+const ANOM = [[0.13,57,57],[0.01,60,53],[1.10,57,63],[1.52,60,73],[0.42,60,70],[0.91,70,67],[0.34,47,63],[-0.93,40,57],[-0.48,47,53],[0.86,53,63],[2.46,70,80],[0.75,60,67]];
+// 平均がマイナスの月=買い時(安く拾える)、その下げの直前の月=売り時、それ以外=保有月
+const anomKind = m => ANOM[m-1][0]<0 ? "buy" : ANOM[m%12][0]<0 ? "sell" : "hold";
+const ANOM_L = {buy:"買い時",hold:"保有月",sell:"売り時"};
+function renderAnom(){
+  const now=new Date().getMonth()+1, k=anomKind(now), a=ANOM[now-1];
+  $("anom").innerHTML = `<div class="hd"><b style="color:var(--${k})">今月(${now}月)は ${ANOM_L[k]}</b><span class="lg"><i style="background:var(--buy)"></i>買い時<i style="background:var(--hold)"></i>保有<i style="background:var(--sell)"></i>売り時</span></div>
+    <div class="row">${ANOM.map((x,i)=>{ const m=i+1, c=`var(--${anomKind(m)})`; return `<div class="${m===now?"now":""}" style="--c:${c}" title="${m}月 ${ANOM_L[anomKind(m)]}:平均${x[0]>0?"+":""}${x[0]}%、上がった年 日経${x[1]}%・S&P${x[2]}%"><span style="background:${c}"></span>${m}</div>`; }).join("")}</div>`;
+  $("anom").title = `${now}月:過去30年の平均 ${a[0]>0?"+":""}${a[0]}%、上がった年 日経${a[1]}%・S&P${a[2]}%`;
 }
 
 // ---- ヘッダーの FIRE グラフ(横軸=年月、左軸=資産、右軸=年間配当) ----
@@ -402,9 +451,9 @@ function linTicks(mn,mx,step){ let st=step>0?step:(mx-mn)/5; while((mx-mn)/st>12
 const man = v => (+v).toLocaleString("ja-JP",{maximumFractionDigits:1})+"万";
 const mIdx = s => { const [y,m]=s.split("-").map(Number); return y*12+m-1; };
 function renderFire(){
-  const F=FIRE(), hero=$("hero"), W=hero.clientWidth||390, H=hero.clientHeight||360;
+  const F=FIRE(), hero=$("hero"), W=hero.clientWidth||390, H=hero.clientHeight||390;
   $("eyebrow").textContent = "TWO ROADS · "+new Date().toLocaleDateString("en-US",{month:"short",day:"numeric"}).toUpperCase();
-  const x0=50, x1=W-44, y0=172, y1=H-30, f=n=>n.toFixed(1);
+  const x0=50, x1=W-44, y0=202, y1=H-30, f=n=>n.toFixed(1);
   const m0=mIdx(F.start), m1=Math.max(mIdx(F.target), m0+1);
   const X=d=>x0+(mIdx(d)-m0)/(m1-m0)*(x1-x0);
   const aR=Math.max(F.aMax-F.aMin,1e-9), YA=v=>y1-Math.max(-0.02,Math.min(1.06,(v-F.aMin)/aR))*(y1-y0), dR=Math.max(F.dMax-F.dMin,1e-9), YD=v=>y1-Math.max(-0.02,Math.min(1.06,(v-F.dMin)/dR))*(y1-y0);
@@ -499,8 +548,15 @@ $("dlgFire").addEventListener("close",()=>{
 });
 
 // ---- 散布図(経過月数 × 下落率) ----
+// 散布図に出す会社名(日経225は略称、米国はカタカナ名があればそれ、無ければ英語名から Inc. などを除く)
+function shortName(r){
+  let n = r.group==="日経225" && r.alias ? r.alias
+    : (r.group==="S&P500"||r.group==="米国REIT") && r.alias && !/^リート/.test(r.alias) ? r.alias.split(" ")[0]
+    : String(r.name||r.sym).replace(/\s*\(The\)/gi,"").replace(/,?\s+(Inc\.?|Incorporated|Corporation|Corp\.?|Company|Co\.?|Ltd\.?|plc|N\.V\.|S\.A\.)$/i,"").trim();
+  return n.length>10 ? n.slice(0,9)+"…" : n;
+}
 function renderScatter(list, idd){
-  const pts = list.filter(r=>!S.hidden.includes(r.sym)).map(r=>({x:r.mo,y:r.dd,label:r.name.length<=8?r.name:r.sym.replace(/\.T$/,""),kind:(r.dd<=-0.2&&r.room>0)?"star":"stock"}));
+  const pts = list.filter(r=>!S.hidden.includes(r.sym)).map(r=>({x:r.mo,y:r.dd,label:shortName(r),kind:(r.dd<=-0.2&&r.room>0)?"star":"stock"}));
   for(const [sym,name] of IDX) if(idd[sym]!=null) pts.push({x:idd[sym+"_mo"],y:idd[sym],label:name,kind:"idx"});
   if(!pts.length){ $("sc").innerHTML=`<div class="small" style="padding:12px 0">データなし</div>`; return; }
   // 実際の表示幅で描画して文字を拡大させない(viewBoxを伸縮させると広い画面で文字が大きくなる)
@@ -541,6 +597,8 @@ document.addEventListener("click",e=>{
   const t=e.target.closest("button"); if(!t) return;
   if(t.dataset.p){ S.period=t.dataset.p; save(); render(); }
   else if(t.dataset.m){ S.mode=t.dataset.m; save(); render(); }
+  else if(t.dataset.mk){ S.market=t.dataset.mk; save(); render(); }
+  else if(t.dataset.v){ S.view=t.dataset.v; save(); render(); }
   else if(t.dataset.tg!=null){ const s=t.dataset.tg, i=S.hidden.indexOf(s); if(i<0) S.hidden.push(s); else S.hidden.splice(i,1); save(); render(); }
   else if(t.dataset.unpend!=null){ S.pending=S.pending.filter(s=>s!==t.dataset.unpend); save(); render(); }
   else if(t.dataset.rm!=null){ const sym=t.dataset.rm, nm=(D.stocks[sym]||{}).name||sym; if(confirm(`${nm} をマイ銘柄から外しますか?`)){ S.mine=S.mine.filter(x=>x!==sym); save(); render(); } }
@@ -548,7 +606,6 @@ document.addEventListener("click",e=>{
   else if(t.dataset.del!=null){ const m=S.manual[+t.dataset.del]; if(confirm(`${m.name||m.symbol} を削除しますか?`)){ S.manual.splice(+t.dataset.del,1); save(); render(); } }
 });
 $("sort").onchange=e=>{ S.sort=e.target.value; save(); render(); };
-$("market").onchange=e=>{ S.market=e.target.value; save(); render(); };
 $("btnAdd").onclick=()=>openStock(-1);
 
 // 日本株は 4桁(または英字入り4桁)コードに .T を付ける
@@ -666,10 +723,26 @@ $("fileImport").onchange=e=>{
 try{ navigator.storage && navigator.storage.persist && navigator.storage.persist(); }catch(e){}
 
 // ---- データ読み込み ----
-fetch("data/prices.json",{cache:"no-store"}).then(r=>r.ok?r.json():null).catch(()=>null).then(j=>{
-  if(j && j.indices) D={indices:j.indices||{},stocks:j.stocks||{},updated:j.updated};
-  fillShelf(); render();
-});
+function loadData(){
+  return fetch("data/prices.json?t="+Date.now(),{cache:"no-store"}).then(r=>r.ok?r.json():null).catch(()=>null).then(j=>{
+    if(j && j.indices) D={indices:j.indices||{},stocks:j.stocks||{},updated:j.updated};
+    fillShelf(); render(); return !!(j && j.indices);
+  });
+}
+loadData();
+// 一括更新: 最新の取得結果を読み込み直して、すべての数字を計算し直す
+let toastT;
+$("btnUpd").onclick=async()=>{
+  const b=$("btnUpd"), before=D.updated; b.disabled=true; b.textContent="⟳ 更新中…";
+  const ok=await loadData();
+  b.disabled=false; b.textContent="⟳ 一括更新";
+  const at=D.updated?D.updated.replace("T"," ").slice(0,16):"";
+  const msg = !ok ? "データを読み込めませんでした。通信状態を確かめてください"
+    : D.updated!==before ? `✓ 最新データに更新しました(${at} 取得分)` : `✓ すでに最新です(${at} 取得分。次の自動取得は平日 6:30・16:30)`;
+  clearTimeout(toastT); const mt=$("meta"); mt.textContent=msg; mt.style.color="var(--up)";
+  toastT=setTimeout(()=>{ mt.style.color=""; render(); },6000);
+};
+$("btnRun").onclick=()=>window.open(`https://github.com/${REPO}/actions/workflows/update.yml`,"_blank","noopener");
 render();
 </script>
 </body>

@@ -4,6 +4,7 @@
 - 指数は直近5年の日次終値(グラフ用)も保存
 - 取得に失敗した銘柄は前回の値を残す(失敗時は数回やり直す)
 - 名前・EPS・BPS・配当(info)は取得に時間がかかるので、前回から7日以上たった銘柄だけ取り直す
+- 過去5年の増配率(dg5)は配当の履歴から計算する(価格と同じ取得なので追加の通信なし)
 - 指数が2つとも取れなければ保存しない(終了コード1)
 """
 import json
@@ -45,6 +46,26 @@ def retry(fn, *a, **k):
             time.sleep(2 * (i + 1))
 
 
+def div_growth(hist, first_date, years=5):
+    """過去5年の増配率(年平均)。直近の確定した年(去年)の年間配当と、その5年前の年間配当から計算する。
+    今年はまだ配当が出そろっていないので使わない。データが足りない・無配の年がある場合は None"""
+    if "Dividends" not in hist:
+        return None
+    d = hist["Dividends"].dropna()
+    d = d[d > 0]
+    if d.empty:
+        return None
+    by_year = d.groupby(d.index.year).sum()
+    last = datetime.now(JST).year - 1
+    base = last - years
+    if first_date.year >= base:  # 基準の年がまるごと入っていない
+        return None
+    a, b = by_year.get(base, 0), by_year.get(last, 0)
+    if a <= 0 or b <= 0:
+        return None
+    return round((b / a) ** (1 / years) - 1, 4)
+
+
 def fetch(symbol, with_series=False, need_info=True):
     t = yf.Ticker(symbol)
     hist = t.history(period="max", auto_adjust=False)
@@ -68,7 +89,9 @@ def fetch(symbol, with_series=False, need_info=True):
     if with_series:
         s = close[close.index >= last_date - timedelta(days=365 * 5)]
         rec["series"] = [[d.strftime("%Y-%m-%d"), round(float(v), 2)] for d, v in s.items()]
-    elif need_info:
+        return rec
+    rec["dg5"] = num(div_growth(hist, close.index[0]))
+    if need_info:
         info = {}
         try:
             info = retry(lambda: t.info) or {}
