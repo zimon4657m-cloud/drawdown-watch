@@ -349,7 +349,7 @@ function rows(){
     list.push({sym,name:r.name||sym,alias:r.alias,group:r.group,dg5:r.dg5,price:r.price,date:r.date,high:h.value,highDate:h.date,eps:r.eps,bps:r.bps,dps:r.dps,
       cur:r.currency||(sym.endsWith(".T")?"JPY":"USD"),auto:true,stale:r.stale,short:S.period!=="max"&&r.first_date>new Date(new Date(r.date)-PERIODS.find(p=>p[0]===S.period)[2]*864e5).toISOString().slice(0,10)});
   }
-  S.manual.forEach((m,i)=>list.push({sym:m.symbol,name:m.name||m.symbol,price:m.price,date:m.updated||today(),high:Math.max(m.high,m.price),highDate:m.price>m.high?(m.updated||today()):m.highDate,
+  S.manual.forEach((m,i)=>list.push({sym:m.symbol,name:m.name||(D.stocks[m.symbol]||{}).name||m.symbol,alias:(D.stocks[m.symbol]||{}).alias,group:(D.stocks[m.symbol]||{}).group,price:m.price,date:m.updated||today(),high:Math.max(m.high,m.price),highDate:m.price>m.high?(m.updated||today()):m.highDate,
     eps:m.eps,bps:m.bps,dps:m.dps,cur:/\.T$|^\d{4}/.test(m.symbol)?"JPY":"USD",auto:false,mi:i}));
   return list;
 }
